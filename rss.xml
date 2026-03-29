@@ -5,7 +5,7 @@
   <link>https://oopsmypassword.web.app/guides/</link>
   <description>Actionable cybersecurity workflows, tools, and implementation checklists.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 29 Mar 2026 15:48:29 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 29 Mar 2026 15:50:38 GMT</lastBuildDate>
   <atom:link href="https://oopsmypassword.web.app/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
@@ -13,7 +13,7 @@
     <link>https://oopsmypassword.web.app/guides/account-recovery-hardening-checklist.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/account-recovery-hardening-checklist.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -21,7 +21,7 @@
     <link>https://oopsmypassword.web.app/guides/api-security-standards.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/api-security-standards.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -29,7 +29,7 @@
     <link>https://oopsmypassword.web.app/guides/best-password-strength-checker.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/best-password-strength-checker.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -37,7 +37,7 @@
     <link>https://oopsmypassword.web.app/guides/biometric-authentication-risks.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/biometric-authentication-risks.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -45,7 +45,7 @@
     <link>https://oopsmypassword.web.app/guides/breach-response-checklist.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/breach-response-checklist.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -53,7 +53,7 @@
     <link>https://oopsmypassword.web.app/guides/browser-extension-security.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/browser-extension-security.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Device Security]]></category>
   </item>
   <item>
@@ -61,7 +61,7 @@
     <link>https://oopsmypassword.web.app/guides/business-continuity-planning-bcp.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/business-continuity-planning-bcp.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -69,7 +69,7 @@
     <link>https://oopsmypassword.web.app/guides/choosing-password-manager.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/choosing-password-manager.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -77,7 +77,7 @@
     <link>https://oopsmypassword.web.app/guides/cloud-misconfiguration-risks.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cloud-misconfiguration-risks.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -85,7 +85,7 @@
     <link>https://oopsmypassword.web.app/guides/container-security-basics.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/container-security-basics.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -93,7 +93,7 @@
     <link>https://oopsmypassword.web.app/guides/credential-stuffing-explained.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/credential-stuffing-explained.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -101,7 +101,7 @@
     <link>https://oopsmypassword.web.app/guides/cryptocurrency-wallet-protection.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cryptocurrency-wallet-protection.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -109,7 +109,7 @@
     <link>https://oopsmypassword.web.app/guides/cyber-insurance-checklist.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cyber-insurance-checklist.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -117,7 +117,7 @@
     <link>https://oopsmypassword.web.app/guides/cybersecurity-incident-handover.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cybersecurity-incident-handover.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -125,7 +125,7 @@
     <link>https://oopsmypassword.web.app/guides/dark-web-monitoring-alerts.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/dark-web-monitoring-alerts.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -133,7 +133,7 @@
     <link>https://oopsmypassword.web.app/guides/data-breach-notification-response.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/data-breach-notification-response.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -141,7 +141,7 @@
     <link>https://oopsmypassword.web.app/guides/data-loss-prevention-basics.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/data-loss-prevention-basics.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -149,7 +149,7 @@
     <link>https://oopsmypassword.web.app/guides/database-encryption-strategies.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/database-encryption-strategies.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -157,7 +157,7 @@
     <link>https://oopsmypassword.web.app/guides/devsecops-integration-rules.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/devsecops-integration-rules.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -165,7 +165,7 @@
     <link>https://oopsmypassword.web.app/guides/digital-footprint-reduction.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/digital-footprint-reduction.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -173,7 +173,7 @@
     <link>https://oopsmypassword.web.app/guides/disaster-recovery-testing.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/disaster-recovery-testing.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -181,7 +181,7 @@
     <link>https://oopsmypassword.web.app/guides/email-header-basics.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/email-header-basics.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Phishing Defense]]></category>
   </item>
   <item>
@@ -189,7 +189,7 @@
     <link>https://oopsmypassword.web.app/guides/endpoint-protection-strategy.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/endpoint-protection-strategy.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -197,7 +197,7 @@
     <link>https://oopsmypassword.web.app/guides/enterprise-patch-management.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/enterprise-patch-management.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -205,7 +205,7 @@
     <link>https://oopsmypassword.web.app/guides/firewall-configuration-guide.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/firewall-configuration-guide.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -213,7 +213,7 @@
     <link>https://oopsmypassword.web.app/guides/forensic-data-collection-protocols.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/forensic-data-collection-protocols.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -221,7 +221,7 @@
     <link>https://oopsmypassword.web.app/guides/gdpr-data-protection-requirements.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/gdpr-data-protection-requirements.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -229,7 +229,7 @@
     <link>https://oopsmypassword.web.app/guides/hardware-security-keys-guide.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/hardware-security-keys-guide.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -237,7 +237,7 @@
     <link>https://oopsmypassword.web.app/guides/incident-evidence-preservation-basics.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/incident-evidence-preservation-basics.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -245,7 +245,7 @@
     <link>https://oopsmypassword.web.app/guides/incident-response-playbook-design.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/incident-response-playbook-design.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -253,7 +253,7 @@
     <link>https://oopsmypassword.web.app/guides/insider-threat-detection.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/insider-threat-detection.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -261,7 +261,7 @@
     <link>https://oopsmypassword.web.app/guides/instagram-password-checker-online.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/instagram-password-checker-online.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -269,7 +269,7 @@
     <link>https://oopsmypassword.web.app/guides/instagram-password-checker.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/instagram-password-checker.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -277,7 +277,7 @@
     <link>https://oopsmypassword.web.app/guides/iot-device-security-standards.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/iot-device-security-standards.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -285,7 +285,7 @@
     <link>https://oopsmypassword.web.app/guides/iso-27001-compliance-steps.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/iso-27001-compliance-steps.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -293,7 +293,7 @@
     <link>https://oopsmypassword.web.app/guides/kubernetes-hardening-guide.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/kubernetes-hardening-guide.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -301,7 +301,7 @@
     <link>https://oopsmypassword.web.app/guides/malicious-link-analysis.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/malicious-link-analysis.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -309,7 +309,7 @@
     <link>https://oopsmypassword.web.app/guides/malware-analysis-basics.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/malware-analysis-basics.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -317,7 +317,7 @@
     <link>https://oopsmypassword.web.app/guides/mfa-method-comparison.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/mfa-method-comparison.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -325,7 +325,7 @@
     <link>https://oopsmypassword.web.app/guides/migrate-passwords-safely.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/migrate-passwords-safely.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -333,7 +333,7 @@
     <link>https://oopsmypassword.web.app/guides/mobile-app-security-hardening.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/mobile-app-security-hardening.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -341,7 +341,7 @@
     <link>https://oopsmypassword.web.app/guides/mobile-device-hardening.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/mobile-device-hardening.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Device Security]]></category>
   </item>
   <item>
@@ -349,7 +349,7 @@
     <link>https://oopsmypassword.web.app/guides/network-segmentation-best-practices.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/network-segmentation-best-practices.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -357,7 +357,7 @@
     <link>https://oopsmypassword.web.app/guides/open-source-intelligence-osint.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/open-source-intelligence-osint.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -365,7 +365,7 @@
     <link>https://oopsmypassword.web.app/guides/passkeys-backup-recovery.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passkeys-backup-recovery.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -373,7 +373,7 @@
     <link>https://oopsmypassword.web.app/guides/passkeys-setup-guide.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passkeys-setup-guide.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -381,7 +381,7 @@
     <link>https://oopsmypassword.web.app/guides/passkeys-vs-passwords.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passkeys-vs-passwords.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -389,7 +389,7 @@
     <link>https://oopsmypassword.web.app/guides/passphrase-method.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passphrase-method.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Identity Security]]></category>
   </item>
   <item>
@@ -397,7 +397,7 @@
     <link>https://oopsmypassword.web.app/guides/password-checker-app.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/password-checker-app.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
   <item>
@@ -405,7 +405,7 @@
     <link>https://oopsmypassword.web.app/guides/password-checker-google.html</link>
     <guid isPermaLink="true">https://oopsmypassword.web.app/guides/password-checker-google.html</guid>
     <description><![CDATA[undefined]]></description>
-    <pubDate>Sun, 29 Mar 2026 15:48:29 GMT</pubDate>
+    <pubDate>Sun, 29 Mar 2026 15:50:38 GMT</pubDate>
     <category><![CDATA[Incident Response]]></category>
   </item>
 </channel>

@@ -303,7 +303,9 @@ const extraKeywords = [
   "Wireless Network Cryptography", "Cryptocurrency Wallet Protection", "Enterprise Patch Management",
   "Password checker online free", "Instagram password Checker", "Password Checker Google",
   "Instagram password checker online", "WiFi password checker online", "Password Checker app",
-  "Password checker Roblox", "Best password strength checker"
+  "Password checker Roblox", "Best password strength checker",
+  "What is a strong password example", "What is a good 12 digit password",
+  "What is a strong 8 character password example", "What are the top 7 passwords"
 ];
 
 for (const topic of extraKeywords) {
