@@ -300,7 +300,10 @@ const extraKeywords = [
   "ISO 27001 Compliance Steps", "SOC 2 Audit Preparation Guide", "GDPR Data Protection Requirements",
   "Cybersecurity Incident Handover", "Forensic Data Collection Protocols", "Malicious Link Analysis",
   "Mobile App Security Hardening", "DevSecOps Integration Rules", "IoT Device Security Standards",
-  "Wireless Network Cryptography", "Cryptocurrency Wallet Protection", "Enterprise Patch Management"
+  "Wireless Network Cryptography", "Cryptocurrency Wallet Protection", "Enterprise Patch Management",
+  "Password checker online free", "Instagram password Checker", "Password Checker Google",
+  "Instagram password checker online", "WiFi password checker online", "Password Checker app",
+  "Password checker Roblox", "Best password strength checker"
 ];
 
 for (const topic of extraKeywords) {
