@@ -2,181 +2,481 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://oopsmypassword.web.app/guides/account-recovery-hardening-checklist.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/api-security-standards.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/biometric-authentication-risks.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/breach-response-checklist.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/browser-extension-security.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/business-continuity-planning-bcp.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/choosing-password-manager.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/cloud-misconfiguration-risks.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/container-security-basics.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/credential-stuffing-explained.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/cryptocurrency-wallet-protection.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/cyber-insurance-checklist.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/cybersecurity-incident-handover.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/dark-web-monitoring-alerts.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/data-breach-notification-response.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/data-loss-prevention-basics.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/database-encryption-strategies.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/devsecops-integration-rules.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/digital-footprint-reduction.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/disaster-recovery-testing.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/email-header-basics.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/endpoint-protection-strategy.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/enterprise-patch-management.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/firewall-configuration-guide.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/forensic-data-collection-protocols.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/gdpr-data-protection-requirements.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/hardware-security-keys-guide.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/incident-evidence-preservation-basics.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/incident-response-playbook-design.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/insider-threat-detection.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/iot-device-security-standards.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/iso-27001-compliance-steps.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/kubernetes-hardening-guide.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/malicious-link-analysis.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/malware-analysis-basics.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/mfa-method-comparison.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/migrate-passwords-safely.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/mobile-app-security-hardening.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/mobile-device-hardening.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/network-segmentation-best-practices.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/open-source-intelligence-osint.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/passkeys-backup-recovery.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/passkeys-setup-guide.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/passkeys-vs-passwords.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/passphrase-method.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/password-length-vs-complexity.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/password-manager-guide.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/password-manager-migration-strategy.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/password-mistakes.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/penetration-testing-guide.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/phishing-password-reset-safety.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/phishing-red-flags-checklist.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/phishing-simulation-best-practices.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/privileged-access-management.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/public-wifi-risk-mitigation.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/ransomware-defense-checklist.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/red-teaming-basics.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/safe-software-downloads.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/secure-backup-recovery-plan.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/secure-coding-practices.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/secure-file-sharing-protocols.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/secure-home-wifi-basics.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/secure-password-manager-settings.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/secure-remote-access.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/security-operations-center-soc-setup.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/serverless-security-patterns.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/sim-swap-defense-checklist.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/soc-2-audit-preparation-guide.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/social-engineering-defense-playbook.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/social-media-account-hardening.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/stop-password-reuse.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/supply-chain-cybersecurity.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/tabletop-exercises-for-cybersecurity.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/third-party-risk-management.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/threat-intelligence-feeds.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/unique-passwords-every-account.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/vulnerability-management-process.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oopsmypassword.web.app/guides/when-passkeys-are-not-available.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/wireless-network-cryptography.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oopsmypassword.web.app/guides/zero-trust-network-access.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
