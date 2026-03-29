@@ -173,5 +173,18 @@ export const TOOL_DESCRIPTORS = [
     estimatedTime: "4-6 min",
     evidenceLevel: "Operational Best Practice",
     lastReviewed: "2026-02-28"
+  },
+  {
+    id: "phishing-link-analyzer",
+    title: "Phishing Link Analyzer",
+    route: "/tools/phishing-link-analyzer/",
+    category: "Phishing Defense",
+    summary: "Safely inspect suspicious URLs and detect phishing characteristics locally before you click.",
+    primaryCta: "Analyze Link",
+    intent: "Identify malicious domains and common URL spoofing patterns.",
+    difficulty: "Low",
+    estimatedTime: "1-2 min",
+    evidenceLevel: "Operational Best Practice",
+    lastReviewed: "2026-03-29"
   }
 ];

@@ -69,7 +69,8 @@ $toolEntries.AddRange(@(
   @{ Url = "/tools/account-priority-matrix/"; Source = "tools/account-priority-matrix/index.html"; ChangeFreq = "weekly"; Priority = "0.9" },
   @{ Url = "/tools/mfa-method-selector/"; Source = "tools/mfa-method-selector/index.html"; ChangeFreq = "weekly"; Priority = "0.9" },
   @{ Url = "/tools/phishing-message-triage/"; Source = "tools/phishing-message-triage/index.html"; ChangeFreq = "weekly"; Priority = "0.9" },
-  @{ Url = "/tools/public-wifi-safety-planner/"; Source = "tools/public-wifi-safety-planner/index.html"; ChangeFreq = "weekly"; Priority = "0.9" }
+  @{ Url = "/tools/public-wifi-safety-planner/"; Source = "tools/public-wifi-safety-planner/index.html"; ChangeFreq = "weekly"; Priority = "0.9" },
+  @{ Url = "/tools/phishing-link-analyzer/"; Source = "tools/phishing-link-analyzer/index.html"; ChangeFreq = "weekly"; Priority = "0.9" }
 ))
 
 $metadataFullPath = Join-Path $repoRoot $GuidesMetadataPath

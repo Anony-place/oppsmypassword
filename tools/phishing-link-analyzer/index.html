@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Phishing Link Analyzer Tool | OopsMyPassword</title>
+  <meta name="description" content="Use our free Phishing Link Analyzer to scan URLs for malicious patterns, credential theft domains, and security red flags without visiting them.">
+  <meta name="keywords" content="phishing link scanner, url analyzer, check malicious url, phishing test online, domain security check">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/phishing-link-analyzer/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phishing Link Analyzer | Real-Time URL Security Scanner">
+  <meta property="og:description" content="Safely inspect suspicious URLs and detect phishing characteristics locally before you click.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/phishing-link-analyzer/">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Phishing Link Analyzer",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/phishing-link-analyzer/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Analyze suspicious URLs for phishing indicators and high-risk domain structures safely."
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Phishing Link Analyzer</h1>
+        <p>Safely inspect URLs for common phishing characteristics and anomalous domain structures before you click.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="analyzer-heading">
+        <div class="section-head">
+          <h2 id="analyzer-heading">Analyze Suspicious URL</h2>
+          <span class="badge warn">Local Heuristics Engine</span>
+        </div>
+        <form id="phishing-analyzer-form" class="tool-form" novalidate>
+          <label for="url-input">Paste suspicious link
+            <input id="url-input" name="url-input" type="url" placeholder="https://example.com/login" required autocomplete="off">
+          </label>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Analyze URL</button>
+            <button id="analyzer-clear" type="button" class="btn-secondary">Clear</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="analyzer-meter-fill" class="meter-fill" style="width:0%"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Safety Score</span><strong id="analyzer-score">- / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="analyzer-level">Unknown</strong></div>
+          </div>
+          <ul id="analyzer-recommendations" class="note-list">
+            <li>Enter a URL above to see security analysis.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">How This Tool Works</h2>
+        <p>This analyzer performs client-side heuristic checks on incoming URLs. It looks for classic indicators of phishing infrastructure, including:</p>
+        <ul class="bullet-list">
+          <li><strong>IP Addresses:</strong> Legit services use domains, not raw IPs.</li>
+          <li><strong>Subdomain Stuffing:</strong> Extremely long sets of subdomains (e.g., <code>secure.login.verify.update.paypal.com.scammer.tk</code>).</li>
+          <li><strong>High-Risk TLDs:</strong> Top-Level Domains that are disproportionally abused due to free registration (e.g., <code>.tk</code>, <code>.ml</code>).</li>
+          <li><strong>Homoglyphs and Hyphens:</strong> Using dash-stuffing to look official.</li>
+        </ul>
+        <p><strong>Note:</strong> A "Low Risk" score does not mean the site is 100% safe. Sophisticated attackers can host phishing pages on entirely legitimate, compromised domains. Always use Multi-Factor Authentication.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script src="/assets/js/tools/phishing-link-analyzer.js?v=1" defer></script>
+</body>
+</html>
