@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Passkey Readiness Tool | OopsMyPassword</title>
+  <meta name="description" content="Evaluate device ecosystem, backup readiness, support coverage, and shared-account constraints before passkey rollout.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/passkey-readiness/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Passkey Readiness Tool | OopsMyPassword">
+  <meta property="og:description" content="Plan a low-lockout passkey migration with score-based readiness phases.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/passkey-readiness/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Passkey Readiness Tool | OopsMyPassword">
+  <meta name="twitter:description" content="Check if your environment is operationally ready for passkey deployment.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Passkey Readiness Tool",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/passkey-readiness/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Assess passkey rollout readiness by ecosystem coverage and recovery resilience."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is one device enough for passkeys?", "acceptedAnswer": {"@type": "Answer", "text": "One device can start adoption, but backup access is required to reduce lockout risk."}},
+        {"@type": "Question", "name": "Should passwords be removed immediately?", "acceptedAnswer": {"@type": "Answer", "text": "No. Keep secure fallback credentials until recovery paths are validated."}},
+        {"@type": "Question", "name": "What is mixed support risk?", "acceptedAnswer": {"@type": "Answer", "text": "When key services lack passkey support, inconsistent workflows can cause unsafe shortcuts."}},
+        {"@type": "Question", "name": "Do shared accounts complicate passkeys?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shared usage requires ownership and recovery rules to avoid lockout or orphaned access."}},
+        {"@type": "Question", "name": "Why use phased rollout?", "acceptedAnswer": {"@type": "Answer", "text": "Phased rollout reduces operational failures and exposes recovery gaps before full migration."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Passkey Readiness</h1>
+        <p>Measure whether your environment can adopt passkeys safely without creating hidden lockout or recovery failures.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge">Rollout Planning</span>
+        </div>
+        <form id="passkey-readiness-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="device-ecosystem">Device ecosystem
+              <select id="device-ecosystem" name="device-ecosystem">
+                <option value="single" selected>Single platform/device</option>
+                <option value="cross-platform">Cross-platform and synced</option>
+              </select>
+            </label>
+            <label for="backup-device">Backup device availability
+              <select id="backup-device" name="backup-device">
+                <option value="yes" selected>Ready now</option>
+                <option value="planned">Planned soon</option>
+                <option value="no">No backup available</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row two">
+            <label for="account-support">Service support coverage
+              <select id="account-support" name="account-support">
+                <option value="high">High support across priority accounts</option>
+                <option value="mixed" selected>Mixed support</option>
+                <option value="low">Low support</option>
+              </select>
+            </label>
+            <label for="shared-usage">Shared account usage
+              <select id="shared-usage" name="shared-usage">
+                <option value="no" selected>No shared accounts</option>
+                <option value="documented">Shared with documented ownership</option>
+                <option value="yes">Shared without clear ownership</option>
+              </select>
+            </label>
+          </div>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Check Readiness</button>
+            <button id="passkey-export" type="button" class="btn-secondary">Export Plan</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="passkey-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Readiness Score</span><strong id="passkey-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Readiness Level</span><strong id="passkey-level">Low</strong></div>
+          </div>
+          <p id="passkey-headline">Set your environment conditions to generate a rollout posture.</p>
+          <ul id="passkey-recommendations" class="bullet-list"></ul>
+          <div id="passkey-next24" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology: Readiness Is Operational, Not Just Technical</h2>
+        <p>Passkey discussions often focus on security strength while ignoring operational readiness. A technically supported feature can still fail in real life if users rely on one device, lack backup access, or manage shared accounts without ownership clarity. This tool evaluates readiness across practical constraints that determine whether migration succeeds or causes lockout.</p>
+        <p>The model weights four dimensions: ecosystem breadth, backup device coverage, service support density, and shared-account governance. High scores reflect not only cryptographic advantage but also continuity resilience. Low scores indicate migration should be staged and fallback controls preserved longer.</p>
+        <p>Psychologically, passkey migration is vulnerable to overconfidence bias. Users may enable passkeys on one account and assume the environment is generally secure. In reality, mixed support can create fragmented behavior where users switch between passkeys and weak password habits without a structured policy. This inconsistency increases errors during incidents.</p>
+        <p>By translating readiness into phased actions, the tool supports progressive implementation. Instead of a binary “ready or not” conclusion, it provides immediate next steps that improve readiness quickly: backup enrollment, support mapping, and ownership documentation. These steps have high leverage and low cost compared to ad-hoc migration after a lockout event.</p>
+        <p>For teams, shared-account handling is a decisive variable. Passkeys can simplify phishing resistance but complicate transfer of operational access if custodianship is undefined. The tool explicitly increases risk when shared usage lacks governance, encouraging teams to formalize access models before broad rollout.</p>
+        <p>Exported readiness output helps coordinate phased migration across departments or households. It keeps assumptions visible and prevents invisible drift, where one person believes backup coverage exists while another has never tested recovery.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Start passkeys on identity-hub accounts with proven backup access.</li>
+          <li>Keep secure password fallback until cross-device recovery is tested.</li>
+          <li>Maintain a support map of services with full, partial, and no passkey support.</li>
+          <li>Define ownership for any shared account before passkey activation.</li>
+          <li>Run quarterly readiness checks after device changes.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="operations-heading">
+        <h2 id="operations-heading">Operational Rollout Notes</h2>
+        <p>Passkey rollout should be treated like an identity migration, not a feature toggle. The highest-value benefit appears when deployment is phased by account impact and backed by tested recovery. If teams skip phase gating, they may activate passkeys broadly but still rely on weak fallbacks, creating a false sense of completion. Controlled rollout with explicit checkpoints avoids this gap.</p>
+        <p>Device lifecycle events are a major readiness variable. Phone replacement, MDM policy changes, and cross-platform usage patterns can all disrupt passkey continuity if backup planning is incomplete. For this reason, readiness should be re-evaluated after significant device transitions, not just on a fixed quarterly schedule. Continuous readiness checks align better with real operational drift.</p>
+        <p>Shared-account environments require additional governance. Determine who can enroll authenticators, who can approve recovery, and how emergency access is triggered when a primary owner is unavailable. This structure should be documented before broad passkey adoption; otherwise availability incidents can offset security gains.</p>
+        <p>Readiness reporting should also include rollback criteria. If sign-in failure rates increase or recovery tickets spike during rollout, pause expansion and resolve operational gaps before continuing. This discipline protects user trust and keeps security adoption sustainable. A measured rollout that pauses when quality drops will outperform aggressive deployment that creates support debt, compliance friction, and lockout incidents. Keep this rollback trigger visible in team playbooks.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A team enables passkeys for key accounts but stores all active credentials on one administrator phone. When that device is replaced unexpectedly, sign-in continuity breaks and incident response slows because fallback paths were never tested.</p>
+        <p>A readiness-driven rollout would have enforced backup devices and shared ownership procedures before broad activation. This prevents security upgrades from becoming availability incidents.</p>
+        <p>Individual users experience similar failure patterns after phone loss. A backup device and tested recovery channel are the difference between seamless restore and multi-day account lockout.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Removing passwords before backup access is validated.</li>
+          <li>Assuming all services support passkeys equally.</li>
+          <li>Ignoring shared-account ownership rules.</li>
+          <li>Skipping post-device-change recovery tests.</li>
+          <li>Treating one successful login as complete migration.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Is one device enough?</h3>
+          <p>You can start with one device, but backup access is required for reliable operations.</p>
+        </article>
+        <article>
+          <h3>Should passwords be removed immediately?</h3>
+          <p>No. Keep fallback credentials until recovery is tested end-to-end.</p>
+        </article>
+        <article>
+          <h3>What is mixed support risk?</h3>
+          <p>Mixed support can force inconsistent behavior and increase unsafe shortcuts.</p>
+        </article>
+        <article>
+          <h3>Do shared accounts complicate rollout?</h3>
+          <p>Yes. Ownership and emergency recovery responsibilities must be defined first.</p>
+        </article>
+        <article>
+          <h3>Why phased rollout?</h3>
+          <p>It catches recovery gaps early and reduces lockout impact on critical accounts.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://fidoalliance.org/passkeys/" target="_blank" rel="noopener noreferrer">FIDO Alliance Passkeys</a></li>
+          <li><a href="https://developers.google.com/identity/passkeys" target="_blank" rel="noopener noreferrer">Google Developers Passkeys</a></li>
+          <li><a href="https://support.apple.com/guide/security/passkeys-sec7aefe77c3/web" target="_blank" rel="noopener noreferrer">Apple Platform Security: Passkeys</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/passkeys-vs-passwords.html">Passkeys vs Passwords</a></li>
+          <li><a href="/guides/passkeys-setup-guide.html">Passkeys Setup Guide</a></li>
+          <li><a href="/guides/passkeys-backup-recovery.html">Passkeys Backup and Recovery Checklist</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/passkey-readiness.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Passphrase Generator Tool | OopsMyPassword</title>
+  <meta name="description" content="Generate memorable or maximum-security passphrases and estimate strength instantly with local processing.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/passphrase-generator/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Passphrase Generator Tool | OopsMyPassword">
+  <meta property="og:description" content="Build memorable and high-entropy passphrases with workflow-ready recommendations.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/passphrase-generator/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Passphrase Generator Tool | OopsMyPassword">
+  <meta name="twitter:description" content="Generate safer passphrases and map them to account risk tiers.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Passphrase Generator Tool",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/passphrase-generator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Generate passphrases in memorability or maximum-security modes with local scoring."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is memorability mode less secure?", "acceptedAnswer": {"@type": "Answer", "text": "Memorability mode can still be strong if phrase length and uniqueness are preserved."}},
+        {"@type": "Question", "name": "Should passphrases include symbols?", "acceptedAnswer": {"@type": "Answer", "text": "Symbols can help, but length and randomness are more important than cosmetic complexity."}},
+        {"@type": "Question", "name": "Can I reuse one passphrase template?", "acceptedAnswer": {"@type": "Answer", "text": "No. Reusing templates increases predictability and cross-account compromise risk."}},
+        {"@type": "Question", "name": "Do I still need MFA?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Strong passphrases reduce guessing risk, while MFA reduces phishing and replay risk."}},
+        {"@type": "Question", "name": "Why export generated results?", "acceptedAnswer": {"@type": "Answer", "text": "Exports help track migration progress while keeping credential policy decisions organized."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Passphrase Generator</h1>
+        <p>Generate phrases in two intentional modes: memorability for daily reliability and maximum-security for high-impact accounts where lockout risk and takeover risk must be balanced carefully.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="generator-heading">
+        <div class="section-head">
+          <h2 id="generator-heading">Run Tool</h2>
+          <span class="badge">Mode-based Generation</span>
+        </div>
+        <form id="passphrase-generator-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="phrase-mode">Generation mode
+              <select id="phrase-mode" name="phrase-mode">
+                <option value="memorability" selected>Memorability</option>
+                <option value="max-security">Max Security</option>
+              </select>
+            </label>
+            <label for="phrase-word-count">Word count
+              <select id="phrase-word-count" name="phrase-word-count">
+                <option value="4" selected>4 words</option>
+                <option value="5">5 words</option>
+                <option value="6">6 words</option>
+                <option value="7">7 words</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row three">
+            <label for="phrase-separator">Separator
+              <select id="phrase-separator" name="phrase-separator">
+                <option value="hyphen" selected>Hyphen</option>
+                <option value="underscore">Underscore</option>
+                <option value="dot">Dot</option>
+                <option value="space">Space</option>
+              </select>
+            </label>
+            <label for="phrase-number">Include number suffix
+              <select id="phrase-number" name="phrase-number">
+                <option value="true" selected>Yes</option>
+                <option value="false">No</option>
+              </select>
+            </label>
+            <label for="phrase-symbol">Include symbol suffix
+              <select id="phrase-symbol" name="phrase-symbol">
+                <option value="true" selected>Yes</option>
+                <option value="false">No</option>
+              </select>
+            </label>
+          </div>
+
+          <label for="phrase-output">Generated passphrase
+            <input id="phrase-output" name="phrase-output" type="text" readonly>
+          </label>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Generate Passphrase</button>
+            <button id="phrase-copy" type="button" class="btn-secondary">Copy</button>
+            <button id="phrase-export" type="button" class="btn-secondary">Export Result</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="phrase-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Score</span><strong id="phrase-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Crack-Time</span><strong id="phrase-crack">&lt;1 second</strong></div>
+          </div>
+          <ul id="phrase-recommendations" class="bullet-list"></ul>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology and Behavioral Design Rationale</h2>
+        <p>Passphrase quality fails less because users lack awareness and more because they fight memory load. Traditional complexity rules push users toward short, patterned strings that look sophisticated but are easy to model. This generator flips the approach by focusing on phrase structure, controlled randomness, and mode-based decisions aligned with account impact.</p>
+        <p>Memorability mode exists for consistent execution. If a workflow is too hard to repeat, users eventually downgrade security under deadline pressure. By using multiple words, optional separators, and constrained suffix options, memorability mode aims to preserve high practical strength while reducing abandonment risk. In other words, it optimizes for durability rather than theoretical perfection alone.</p>
+        <p>Maximum-security mode increases structural entropy for accounts where compromise cost is high. It introduces stronger defaults, expands phrase length, and enforces mixed suffix behavior. This mode is appropriate for identity hubs, financial portals, and admin control planes where a single compromise can trigger cascading damage.</p>
+        <p>Psychologically, users perform better when tools make tradeoffs explicit. The mode selector communicates intent clearly: one path for operational reliability, one path for elevated defense. This prevents a common confusion pattern where users over-harden low-risk accounts while under-protecting critical ones because the decision model is vague.</p>
+        <p>The tool keeps assessment local and provides immediate strength estimation through the same core model used across the platform. This consistency ensures that generated outputs and checker outputs remain comparable. Users can test, adapt, and retest within seconds, improving learning loops and reducing blind trust in generated strings.</p>
+        <p>Export capability supports migration governance. Teams and individuals can record mode usage, word length decisions, and target account tiers without storing plaintext secrets in shared documents. This is especially useful during broad credential modernization programs where reproducibility and accountability matter.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Use memorability mode for high-frequency daily logins with medium impact.</li>
+          <li>Use max-security mode for email, banking, cloud admin, and recovery hubs.</li>
+          <li>Never reuse generated phrases across services, even if score appears strong.</li>
+          <li>Store generated phrases in a manager immediately to avoid fallback shortcuts.</li>
+          <li>Pair all critical phrase deployments with MFA and recovery-code verification.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="implementation-heading">
+        <h2 id="implementation-heading">Implementation Notes and Policy Mapping</h2>
+        <p>When teams adopt passphrases, the biggest failure mode is inconsistent mode usage across account classes. Users may pick memorability mode for critical accounts during busy periods, then forget to revisit that decision. A stronger process is to define account classes first, then map each class to one generation mode with explicit exceptions. This reduces decision fatigue and keeps outcomes predictable.</p>
+        <p>For households and small teams, phrase custody should also be planned. If a credential is generated for a shared account, ownership and recovery responsibility must be documented immediately. Without this step, groups often rely on copy-paste sharing through insecure channels, which undermines the value of high-entropy generation. The recommended path is manager-based sharing with access logs and periodic permission reviews.</p>
+        <p>Maintenance cadence is equally important. Generated phrases should be reviewed after major incidents, platform policy changes, or account recovery events. Users should avoid arbitrary forced rotation unless compromise signals appear, but they should still test phrase strength periodically to detect drift toward weaker habits. Exports from this tool can be used as checkpoints for those reviews.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A user migrates to stronger credentials but chooses only maximum complexity outputs for every account. Within a week, friction increases and they start reusing one favorite phrase with minor suffix edits. Security appears improved on paper but operational behavior regresses.</p>
+        <p>With explicit modes, the same user can assign memorability mode to lower-impact accounts and reserve max-security mode for identity hubs. This keeps behavior consistent and reduces the chance of hidden reuse.</p>
+        <p>For small teams, mode-based policy is easier to train. Team leads can document “which mode for which account tier” and verify results quickly through export metadata.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Using themed words tied to hobbies, cities, or public identity clues.</li>
+          <li>Applying one phrase pattern across every account.</li>
+          <li>Skipping manager storage and relying on memory under stress.</li>
+          <li>Treating symbol presence as a substitute for phrase length.</li>
+          <li>Ignoring account impact when selecting generation mode.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Is memorability mode less secure?</h3>
+          <p>Not by default. It remains effective when word count and uniqueness are maintained.</p>
+        </article>
+        <article>
+          <h3>Do symbols matter?</h3>
+          <p>They can help, but phrase length and unpredictability have larger impact.</p>
+        </article>
+        <article>
+          <h3>Can I reuse one template?</h3>
+          <p>No. Template reuse creates predictable structure that attackers can exploit across accounts.</p>
+        </article>
+        <article>
+          <h3>Should I still use MFA?</h3>
+          <p>Yes. MFA remains essential against phishing and session hijacking.</p>
+        </article>
+        <article>
+          <h3>Why export generated results?</h3>
+          <p>Exports support migration tracking and policy review without exposing live credentials broadly.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">EFF Diceware Guidance</a></li>
+          <li><a href="https://www.cisa.gov/secure-our-world/use-strong-passwords" target="_blank" rel="noopener noreferrer">CISA Strong Password Guidance</a></li>
+          <li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/passphrase-method.html">Passphrase Method for Strong, Memorable Passwords</a></li>
+          <li><a href="/guides/password-manager-guide.html">Password Manager Guide for Beginners</a></li>
+          <li><a href="/guides/secure-password-manager-settings.html">Secure Password Manager Settings</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/passphrase-generator.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

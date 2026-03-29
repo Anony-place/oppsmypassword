@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Breach Response Planner | OopsMyPassword</title>
+  <meta name="description" content="Generate a timed 24-hour breach response sequence based on incident type, account class, MFA status, and payment exposure.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/breach-response-planner/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Breach Response Planner | OopsMyPassword">
+  <meta property="og:description" content="Get prioritized incident response actions for the first critical 24 hours.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/breach-response-planner/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Breach Response Planner | OopsMyPassword">
+  <meta name="twitter:description" content="Contain account incidents with a structured 0-1h, 1-6h, and 6-24h plan.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Breach Response Planner",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/breach-response-planner/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Incident response planning tool for the first 24-hour containment window."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What should happen in the first hour?", "acceptedAnswer": {"@type": "Answer", "text": "Secure identity hub accounts, revoke active sessions, and remove unknown devices immediately."}},
+        {"@type": "Question", "name": "Should low-risk accounts be reset first?", "acceptedAnswer": {"@type": "Answer", "text": "No. Critical identity and financial accounts must be handled before lower-impact services."}},
+        {"@type": "Question", "name": "Is password reset enough?", "acceptedAnswer": {"@type": "Answer", "text": "No. Session revocation, recovery checks, and monitoring are required to prevent re-entry."}},
+        {"@type": "Question", "name": "When should payment providers be notified?", "acceptedAnswer": {"@type": "Answer", "text": "Immediately if payment exposure is likely or suspicious transactions are detected."}},
+        {"@type": "Question", "name": "Why export the plan?", "acceptedAnswer": {"@type": "Answer", "text": "Exported plans improve coordination and reduce missed steps during high-pressure incidents."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Breach Response Planner</h1>
+        <p>Build a time-ordered response for the first 24 hours after exposure so critical containment actions happen before low-impact cleanup work.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge risk">Incident Mode</span>
+        </div>
+        <form id="breach-response-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="breach-type">Breach type
+              <select id="breach-type" name="breach-type">
+                <option value="password-leak" selected>Password leak reported</option>
+                <option value="phishing-click">Phishing link clicked</option>
+                <option value="active-takeover">Active takeover signs</option>
+              </select>
+            </label>
+            <label for="account-class">Affected account class
+              <select id="account-class" name="account-class">
+                <option value="email" selected>Primary email</option>
+                <option value="banking">Banking/payment</option>
+                <option value="work">Work/organization</option>
+                <option value="social">Social/consumer</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row two">
+            <label for="mfa-status">MFA status
+              <select id="mfa-status" name="mfa-status">
+                <option value="enabled" selected>Enabled and available</option>
+                <option value="unknown">Unknown</option>
+                <option value="disabled">Disabled or bypassed</option>
+              </select>
+            </label>
+            <label for="payment-exposure">Payment exposure
+              <select id="payment-exposure" name="payment-exposure">
+                <option value="none" selected>No payment access</option>
+                <option value="cards-linked">Cards linked</option>
+                <option value="transactions-seen">Suspicious transactions seen</option>
+              </select>
+            </label>
+          </div>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Build Response Plan</button>
+            <button id="breach-export" type="button" class="btn-secondary">Export Plan</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="breach-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Urgency Score</span><strong id="breach-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="breach-level">Low</strong></div>
+          </div>
+          <p id="breach-headline">Set incident context to generate an ordered response plan.</p>
+          <ul id="breach-recommendations" class="bullet-list"></ul>
+          <div id="breach-steps" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="methodology-heading">
+        <h2 id="methodology-heading">Methodology: Why Sequence Matters More Than Speed Alone</h2>
+        <p>During account incidents, people often act fast but in the wrong order. They reset visible low-impact accounts first because those are easiest to access, while identity hub accounts remain exposed. Attackers exploit this delay by pivoting through email recovery flows and persistent sessions before victims complete full cleanup.</p>
+        <p>This planner uses a weighted incident model to force sequencing discipline. It considers breach type, affected account class, MFA confidence, and payment exposure to produce an urgency score. The score itself is not the endpoint; it determines how aggressively the 0-1h, 1-6h, and 6-24h tasks should be executed and escalated.</p>
+        <p>The first hour is treated as a containment window, not a communications window. Core actions include identity-hub reset, global session invalidation, and device trust review. These moves directly reduce attacker dwell time and block common re-entry paths such as existing sessions, stale tokens, and unchanged recovery factors.</p>
+        <p>From hour one to six, the workflow shifts from containment to stabilization. High-impact connected accounts are rotated, payment controls are reviewed, and MFA health is verified. In many incidents, this window determines whether financial loss or internal lateral movement is prevented.</p>
+        <p>From hour six to twenty-four, actions become evidence and resilience oriented. Users document timeline events, review anomalous activity, and validate recovery hygiene. This phase is often skipped, which allows delayed attacker replay. The planner includes it explicitly because operational security depends on persistence, not single-event reaction.</p>
+        <p>Psychologically, explicit time-boxing reduces panic decisions. A structured sequence gives users a sense of control and prevents overcorrection on low-value tasks. In team scenarios, exported plans create shared coordination language so support, operations, and account owners execute without duplication or blind spots.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Start with identity hubs and recovery roots before peripheral accounts.</li>
+          <li>Reset plus revoke sessions; do not rely on password change alone.</li>
+          <li>Treat MFA status as a variable requiring verification, not assumption.</li>
+          <li>Escalate immediately if payment indicators show unauthorized transactions.</li>
+          <li>Keep an incident log to support post-incident hardening and support escalation.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="operations-heading">
+        <h2 id="operations-heading">Operational Execution Notes</h2>
+        <p>Incident response quality depends on role clarity. In many real breaches, the same person attempts triage, communication, and remediation simultaneously, which causes sequence errors. A better pattern is to split roles even in small teams: one owner handles credential and session actions, one owner validates payment and identity-side effects, and one owner maintains timeline documentation. This separation improves accuracy without requiring enterprise tooling.</p>
+        <p>Evidence capture is also under-prioritized in the first day. Even simple notes such as alert timestamps, account changes, and support ticket IDs improve follow-up decisions. If suspicious behavior reappears, you can compare against prior signals and escalate faster. The planner intentionally includes a 6-24h phase because the highest-value security improvements often occur after immediate panic has subsided.</p>
+        <p>Finally, run a post-incident retrospective. Determine which controls failed first, which actions were delayed, and what ownership gaps appeared. Update your default checklist accordingly. Over time, this turns one-off response into an operational system that becomes faster and more reliable with each incident.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A user receives a “suspicious sign-in” email and resets one social account password. They postpone email and banking changes until later due time pressure. The attacker remains active via existing sessions, triggers recovery flows, and performs unauthorized payment activity before full containment begins.</p>
+        <p>With a timed response plan, the user would prioritize identity-hub protection in the first hour, revoke sessions, then handle payment exposure in the second window. This prevents attacker persistence and shortens total incident duration.</p>
+        <p>For small organizations, the same sequence helps separate role ownership: one person handles identity controls, another validates payment or vendor exposure, and a third maintains incident documentation. Coordination quality improves and recovery becomes measurable.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Resetting low-risk accounts before primary email and financial logins.</li>
+          <li>Assuming MFA is still active without verification.</li>
+          <li>Skipping session revocation and device trust cleanup.</li>
+          <li>Failing to notify payment providers when signals appear.</li>
+          <li>Stopping work after initial reset without follow-up monitoring.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>What belongs in the first hour?</h3>
+          <p>Identity hub reset, session revocation, and unknown-device removal are first-hour priorities.</p>
+        </article>
+        <article>
+          <h3>Should low-impact accounts be reset first?</h3>
+          <p>No. Peripheral cleanup should wait until core accounts are controlled.</p>
+        </article>
+        <article>
+          <h3>Is reset alone enough?</h3>
+          <p>No. You also need session invalidation, recovery checks, and monitoring.</p>
+        </article>
+        <article>
+          <h3>When do I notify payment providers?</h3>
+          <p>Immediately when suspicious transactions appear or payment access may be exposed.</p>
+        </article>
+        <article>
+          <h3>Why export the plan?</h3>
+          <p>Export improves coordination and ensures critical sequence is preserved under pressure.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://www.cisa.gov/secure-our-world" target="_blank" rel="noopener noreferrer">CISA Secure Our World</a></li>
+          <li><a href="https://consumer.ftc.gov/articles/what-do-after-data-breach" target="_blank" rel="noopener noreferrer">FTC: What to Do After a Data Breach</a></li>
+          <li><a href="https://www.ic3.gov/" target="_blank" rel="noopener noreferrer">FBI Internet Crime Complaint Center</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/breach-response-checklist.html">Password Breach Response Checklist</a></li>
+          <li><a href="/guides/credential-stuffing-explained.html">Credential Stuffing Explained</a></li>
+          <li><a href="/guides/account-recovery-hardening-checklist.html">Account Recovery Hardening Checklist</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/breach-response-planner.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

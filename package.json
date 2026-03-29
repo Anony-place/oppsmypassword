@@ -1,0 +1,24 @@
+{
+  "name": "oopsmypassword-site",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build:pages": "node scripts/render-pages.js",
+    "build:guides": "node scripts/render-guides.js",
+    "build:site": "npm run build:pages && npm run build:guides",
+    "audit:content": "node scripts/content-audit.js",
+    "audit:tools": "node scripts/tools-content-audit.js",
+    "audit:seo": "node scripts/audit-seo.js",
+    "audit:links": "node scripts/audit-links.js",
+    "audit:adsense": "node scripts/audit-adsense.js",
+    "audit:encoding": "node scripts/audit-encoding.js",
+    "audit:all": "npm run audit:content && npm run audit:tools && npm run audit:seo && npm run audit:links && npm run audit:adsense && npm run audit:encoding"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
+  }
+}

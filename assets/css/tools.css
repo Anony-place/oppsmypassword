@@ -1,0 +1,383 @@
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.tool-card {
+  border: 1px solid var(--soft-border);
+  border-radius: 13px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--surface-1) 92%, transparent), color-mix(in srgb, var(--surface-2) 88%, transparent));
+  padding: 14px;
+  display: grid;
+  gap: 9px;
+  min-height: 100%;
+  box-shadow: var(--shadow-1);
+}
+
+.tool-card[data-category="identity-security"] {
+  border-color: color-mix(in srgb, var(--success-500) 48%, transparent);
+}
+
+.tool-card[data-category="incident-response"] {
+  border-color: color-mix(in srgb, var(--risk-500) 48%, transparent);
+}
+
+.tool-card[data-category="phishing-defense"] {
+  border-color: color-mix(in srgb, var(--warning-500) 56%, transparent);
+}
+
+.tool-card[data-category="device-security"] {
+  border-color: color-mix(in srgb, var(--calm-500) 56%, transparent);
+}
+
+.tool-card[data-category="network-security"] {
+  border-color: color-mix(in srgb, var(--calm-500) 56%, transparent);
+}
+
+.tool-card .badge {
+  margin-bottom: 2px;
+}
+
+.tool-card .badge.identity-security {
+  border-color: color-mix(in srgb, var(--success-500) 72%, transparent);
+  color: color-mix(in srgb, var(--success-500) 78%, var(--ink-050));
+  background: color-mix(in srgb, var(--success-500) 18%, transparent);
+}
+
+.tool-card .badge.incident-response {
+  border-color: color-mix(in srgb, var(--risk-500) 72%, transparent);
+  color: color-mix(in srgb, var(--risk-500) 80%, var(--ink-050));
+  background: color-mix(in srgb, var(--risk-500) 18%, transparent);
+}
+
+.tool-card .badge.phishing-defense {
+  border-color: color-mix(in srgb, var(--warning-500) 76%, transparent);
+  color: color-mix(in srgb, var(--warning-500) 80%, var(--ink-050));
+  background: color-mix(in srgb, var(--warning-500) 18%, transparent);
+}
+
+.tool-card .badge.device-security,
+.tool-card .badge.network-security {
+  border-color: color-mix(in srgb, var(--calm-500) 76%, transparent);
+  color: color-mix(in srgb, var(--calm-500) 80%, var(--ink-050));
+  background: color-mix(in srgb, var(--calm-500) 18%, transparent);
+}
+
+.tool-card h3 {
+  font-size: 1.06rem;
+  color: var(--text-emphasis);
+}
+
+.tool-card p {
+  margin: 0;
+  color: var(--ink-200);
+  line-height: 1.5;
+}
+
+.tool-card .cta-secondary {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.tool-card:hover {
+  border-color: var(--border-2);
+  box-shadow: var(--shadow-2);
+}
+
+.table-wrap {
+  overflow: auto;
+  border-radius: 12px;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--surface-1) 90%, transparent);
+}
+
+.compare-table th,
+.compare-table td {
+  border-bottom: 1px solid var(--soft-border);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.compare-table tbody tr:nth-child(2n) {
+  background: color-mix(in srgb, var(--surface-3) 42%, transparent);
+}
+
+.compare-table tbody tr:hover {
+  background: color-mix(in srgb, var(--calm-500) 18%, transparent);
+}
+
+.compare-table th {
+  color: var(--text-emphasis);
+  background: color-mix(in srgb, var(--surface-3) 75%, transparent);
+  font-weight: 700;
+}
+
+.compare-table td {
+  color: var(--ink-200);
+}
+
+.compare-table td a {
+  color: var(--link-500);
+  font-weight: 600;
+}
+
+.tool-form {
+  display: grid;
+  gap: 12px;
+}
+
+.tool-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.tool-form input,
+.tool-form select,
+.tool-form textarea {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--field-border);
+  background: var(--field-bg);
+  color: var(--text);
+  padding: 9px 11px;
+}
+
+.tool-form input::placeholder,
+.tool-form textarea::placeholder {
+  color: var(--text-subtle);
+}
+
+.tool-form input:focus,
+.tool-form select:focus,
+.tool-form textarea:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--focus) 36%, transparent);
+  outline: none;
+}
+
+.tool-form textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  gap: 10px;
+}
+
+.matrix-row {
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--surface-muted);
+}
+
+.tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: var(--primary-500);
+  color: #f5fbff;
+  border-color: var(--primary-600);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  background: var(--primary-600);
+  border-color: var(--primary-700);
+  color: #f9fdff;
+}
+
+.btn-secondary {
+  background: var(--secondary-500);
+  border-color: var(--border-1);
+  color: var(--ink-100);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-600);
+  border-color: var(--border-2);
+  color: var(--ink-050);
+}
+
+.result-panel {
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface-1) 92%, transparent);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.result-panel h3 {
+  font-size: 1.05rem;
+}
+
+.result-panel p {
+  margin: 0;
+}
+
+.meter {
+  width: 100%;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--field-border);
+  background: color-mix(in srgb, var(--surface-0) 84%, transparent);
+  overflow: hidden;
+}
+
+.meter-fill {
+  width: 0;
+  height: 100%;
+  transition: width var(--timing-med) var(--easing-standard), background-color var(--timing-med) var(--easing-standard);
+  background: var(--risk-500);
+}
+
+.meter-fill.medium {
+  background: var(--warning-500);
+}
+
+.meter-fill.good {
+  background: var(--success-500);
+}
+
+.stepper {
+  position: relative;
+  display: grid;
+  gap: 9px;
+}
+
+.step {
+  position: relative;
+  border-left: 3px solid var(--border-1);
+  background: var(--surface-muted);
+  border-radius: 8px;
+  padding: 10px 12px 10px 14px;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--calm-500);
+}
+
+.step strong {
+  color: var(--text-emphasis);
+}
+
+.note-list,
+.bullet-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.note-list li + li,
+.bullet-list li + li {
+  margin-top: 6px;
+}
+
+.microcopy {
+  color: var(--ink-300);
+  font-size: 0.9rem;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.kpi {
+  border: 1px solid var(--soft-border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface-2) 82%, transparent);
+  padding: 9px;
+}
+
+.kpi strong {
+  display: block;
+  font-size: 1.18rem;
+  color: var(--text-emphasis);
+  line-height: 1.2;
+}
+
+.faq article + article {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--soft-border);
+}
+
+.faq article h3 {
+  margin-bottom: 6px;
+}
+
+.notice {
+  border: 1px solid color-mix(in srgb, var(--warning-500) 74%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--warning-500) 16%, transparent);
+  padding: 10px 12px;
+  color: color-mix(in srgb, var(--warning-500) 80%, var(--ink-050));
+}
+
+.inline-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: color-mix(in srgb, var(--surface-3) 38%, transparent);
+  border: 1px solid var(--soft-border);
+  border-radius: 6px;
+  padding: 2px 6px;
+  color: var(--ink-100);
+}
+
+@media (min-width: 760px) {
+  .form-row.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-row.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .tool-card {
+    padding: 13px;
+  }
+
+  .tool-actions > * {
+    width: 100%;
+  }
+
+  .tool-card .cta-secondary {
+    width: 100%;
+  }
+
+  .compare-table {
+    min-width: 600px;
+  }
+}

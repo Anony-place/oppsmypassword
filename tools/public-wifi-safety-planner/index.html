@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Public Wi-Fi Safety Planner | OopsMyPassword</title>
+  <meta name="description" content="Plan safe public-network sessions by scoring network trust, activity sensitivity, VPN usage, and device readiness.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/public-wifi-safety-planner/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/img/icons/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Public Wi-Fi Safety Planner | OopsMyPassword">
+  <meta property="og:description" content="Reduce session hijack and interception risk with practical pre-session and post-session controls.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/public-wifi-safety-planner/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Public Wi-Fi Safety Planner | OopsMyPassword">
+  <meta name="twitter:description" content="Create a safe-session plan before using open, captive, or shared public networks.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Public Wi-Fi Safety Planner",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/public-wifi-safety-planner/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Evaluate session risk on untrusted networks and generate immediate mitigation actions."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is HTTPS enough on public Wi-Fi?", "acceptedAnswer": {"@type": "Answer", "text": "No. HTTPS helps but does not remove endpoint and session-hijack risks."}},
+        {"@type": "Question", "name": "Should VPN always be enabled on public networks?", "acceptedAnswer": {"@type": "Answer", "text": "For sensitive tasks, yes. VPN improves transport protection and traffic control."}},
+        {"@type": "Question", "name": "Are captive portals trustworthy by default?", "acceptedAnswer": {"@type": "Answer", "text": "No. Captive portals should be verified before entering any personal details."}},
+        {"@type": "Question", "name": "What tasks should be avoided on open Wi-Fi?", "acceptedAnswer": {"@type": "Answer", "text": "Avoid password resets, admin actions, and financial operations on open networks."}},
+        {"@type": "Question", "name": "What is the safest post-session habit?", "acceptedAnswer": {"@type": "Answer", "text": "Forget the network profile and review account activity for unusual sign-ins."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Public Wi-Fi Safety Planner</h1>
+        <p>Assess whether the network conditions and your planned activity are compatible before exposing sensitive account or payment workflows.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge risk">Session Risk Planner</span>
+        </div>
+        <form id="wifi-safety-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="wifi-network-type">Network type
+              <select id="wifi-network-type" name="wifi-network-type">
+                <option value="open" selected>Open network (no password)</option>
+                <option value="captive">Captive portal network</option>
+                <option value="shared-password">Shared password network</option>
+              </select>
+            </label>
+            <label for="wifi-vpn-status">VPN status
+              <select id="wifi-vpn-status" name="wifi-vpn-status">
+                <option value="off" selected>Off</option>
+                <option value="inconsistent">On sometimes</option>
+                <option value="on">Always on with kill switch</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row two">
+            <label for="wifi-activity-type">Planned activity
+              <select id="wifi-activity-type" name="wifi-activity-type">
+                <option value="sensitive" selected>Email and account management</option>
+                <option value="admin">Admin, banking, or reset operations</option>
+                <option value="normal">General browsing only</option>
+              </select>
+            </label>
+            <label for="wifi-device-patch">Device patch status
+              <select id="wifi-device-patch" name="wifi-device-patch">
+                <option value="outdated" selected>Outdated</option>
+                <option value="unknown">Unknown</option>
+                <option value="current">Current</option>
+              </select>
+            </label>
+          </div>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Plan Safe Session</button>
+            <button id="wifi-export" type="button" class="btn-secondary">Export Session Plan</button>
+          </div>
+        </form>
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="wifi-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Risk Score</span><strong id="wifi-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="wifi-level">Low</strong></div>
+            <div class="kpi"><span class="microcopy">Session Decision</span><strong id="wifi-headline">Apply safeguards</strong></div>
+          </div>
+          <ul id="wifi-recommendations" class="bullet-list"></ul>
+          <div id="wifi-steps" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology and Decision Model</h2>
+        <p>Public networks are useful for continuity but risky for sensitive operations. Most users decide based on internet availability, not on whether the environment is appropriate for account management, password resets, or financial actions. This planner forces a risk-first decision by combining network characteristics with the exact task you intend to perform.</p>
+        <p>The model treats activity type as central. An open network might be tolerable for low-impact browsing, yet inappropriate for admin changes or credential updates. By linking risk to task category, the tool prevents a common error where users assume every online action has the same exposure level. Session context matters as much as transport status.</p>
+        <p>VPN usage and patch state are included because network-level controls alone cannot offset weak endpoints. A fully encrypted tunnel does not protect outdated devices from credential theft through compromised applications or local malware. The tool therefore outputs layered guidance that combines connection hygiene with endpoint readiness and session behavior controls.</p>
+        <p>Practical timing is another design factor. Many risky actions happen in transit when users are rushed and skip checks. The planner emphasizes pre-session controls and post-session cleanup so risk is managed before and after active browsing, not only during connection time.</p>
+        <p>For teams this supports remote-work policy. Activity tiers can be mapped to allowed network profiles, making enforcement clearer for employees and support teams. For individuals it delivers a simple decision: if the task can wait, defer sensitive actions to trusted networks; if it cannot, use strict safeguards and minimize session scope.</p>
+        <p>Network policy should be written in operational language, not generic warnings. Users need direct answers to questions such as which tasks are blocked on open Wi-Fi, what exceptions are allowed, and who approves emergency bypass requests. Clear answers reduce unsafe improvisation.</p>
+        <p>Session risk management improves when organizations review travel-heavy roles separately. Frequent travelers face repeated exposure to public infrastructure and need tighter controls, faster incident reporting paths, and more rigorous post-session review expectations than low-mobility users.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Verify network identity before joining any public access point.</li>
+          <li>Enable trusted VPN before sensitive traffic begins.</li>
+          <li>Avoid password resets, payments, and admin operations on open networks.</li>
+          <li>Disable auto-connect and file sharing while using public connectivity.</li>
+          <li>Forget network profile and review sign-in logs after session end.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="implementation-heading">
+        <h2 id="implementation-heading">Implementation Notes</h2>
+        <p>Adopt an activity-tier matrix for network usage. Low-impact activities can be permitted on broader network classes, while high-impact actions require trusted conditions plus endpoint safeguards. This avoids vague policy language and gives users immediate decision rules they can apply under schedule pressure.</p>
+        <p>Define emergency fallback for unavoidable sensitive work. If critical tasks must occur on public infrastructure, require VPN, short session windows, and immediate post-session validation. Fallback plans should be documented before travel or outage scenarios, not invented during urgent operations.</p>
+        <p>Measure adherence and incident patterns. Track how often sensitive tasks are attempted on untrusted networks and whether post-session reviews catch anomalies. Metrics create accountability and reveal where process design or user support needs improvement.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A traveler connects to airport Wi-Fi and performs urgent account resets while using an outdated device without VPN. The tasks appear successful in the moment, but credential activity later shows unusual sign-in attempts from unfamiliar locations. The user completed tasks quickly but with high hidden exposure.</p>
+        <p>With session planning, the user would have deferred resets, limited activity scope, or used layered controls before continuing. Post-session account review would also have started immediately, reducing dwell time if compromise occurred.</p>
+        <p>Organizations face similar risk when responders use convenience networks for privileged work during incidents. A structured network-activity policy prevents avoidable escalation while preserving operational continuity.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Treating all public networks as equally safe.</li>
+          <li>Running account resets and payment tasks on open Wi-Fi.</li>
+          <li>Using VPN inconsistently and assuming occasional use is enough.</li>
+          <li>Ignoring device patch lag on untrusted networks.</li>
+          <li>Keeping auto-join enabled for transient hotspots.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Is HTTPS enough on public Wi-Fi?</h3>
+          <p>No. HTTPS helps, but endpoint weakness and session abuse can still expose sensitive actions.</p>
+        </article>
+        <article>
+          <h3>Should VPN always be used on public networks?</h3>
+          <p>For sensitive activity, yes. VPN adds strong transport controls and improves network trust posture.</p>
+        </article>
+        <article>
+          <h3>Are captive portals trustworthy by default?</h3>
+          <p>No. Captive portals should be verified before entering identity, payment, or reset information.</p>
+        </article>
+        <article>
+          <h3>Which tasks should be avoided on open networks?</h3>
+          <p>Avoid admin operations, financial transactions, and password resets on open infrastructure.</p>
+        </article>
+        <article>
+          <h3>What is the safest post-session habit?</h3>
+          <p>Forget the network profile and review account activity for anomalies immediately after disconnect.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://consumer.ftc.gov/articles/how-safely-use-public-wi-fi-networks" target="_blank" rel="noopener noreferrer">FTC Public Wi-Fi Safety</a></li>
+          <li><a href="https://www.cisa.gov/secure-our-world/secure-your-device" target="_blank" rel="noopener noreferrer">CISA Device Security Guidance</a></li>
+          <li><a href="https://csrc.nist.gov/publications/detail/sp/800-153/final" target="_blank" rel="noopener noreferrer">NIST SP 800-153</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/public-wifi-risk-mitigation.html">Public Wi-Fi Risk Mitigation</a></li>
+          <li><a href="/guides/secure-home-wifi-basics.html">Secure Home Wi-Fi Basics</a></li>
+          <li><a href="/guides/mobile-device-hardening.html">Mobile Device Hardening Plan</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/public-wifi-safety-planner.js?v=20260305v1" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>

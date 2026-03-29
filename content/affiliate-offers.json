@@ -1,0 +1,12 @@
+[
+  {
+    "id": "pm_offer_001",
+    "category": "password_manager",
+    "title": "Recommended Password Manager",
+    "url": "https://example.com/password-manager?ref=oopsmypassword",
+    "cta": "Try This Password Manager",
+    "disclosure": "This section contains an affiliate link. If you purchase through this link, we may earn a commission at no extra cost to you.",
+    "active": true,
+    "last_verified_on": "2026-02-28"
+  }
+]

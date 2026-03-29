@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Phishing Message Triage | OopsMyPassword</title>
+  <meta name="description" content="Triage suspicious messages with a structured score before clicking links, opening attachments, or sharing credentials.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/phishing-message-triage/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/img/icons/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phishing Message Triage | OopsMyPassword">
+  <meta property="og:description" content="Score suspicious messages and generate immediate verification and containment actions.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/phishing-message-triage/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phishing Message Triage | OopsMyPassword">
+  <meta name="twitter:description" content="Reduce social engineering risk with repeatable message verification steps.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Phishing Message Triage",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/phishing-message-triage/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Classify suspicious messages before user interaction and enforce verification workflow."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Can internal chat messages be phishing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Compromised internal accounts can impersonate trusted colleagues."}},
+        {"@type": "Question", "name": "Is sender display name a trust signal?", "acceptedAnswer": {"@type": "Answer", "text": "No. Display names are easy to spoof and should not be trusted alone."}},
+        {"@type": "Question", "name": "Should urgent payment requests be trusted?", "acceptedAnswer": {"@type": "Answer", "text": "No. Payment urgency is a common social engineering pattern and requires independent verification."}},
+        {"@type": "Question", "name": "What if I already clicked the link?", "acceptedAnswer": {"@type": "Answer", "text": "Capture evidence, rotate exposed credentials, and escalate according to incident process immediately."}},
+        {"@type": "Question", "name": "Should suspicious messages be deleted right away?", "acceptedAnswer": {"@type": "Answer", "text": "Preserve key metadata first so response teams can investigate and tune controls."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Phishing Message Triage</h1>
+        <p>Score suspicious messages by sender confidence, urgency pressure, link behavior, and request type before any user interaction occurs.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge warn">Pre-Click Verification</span>
+        </div>
+        <form id="phishing-triage-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="triage-sender-confidence">Sender confidence
+              <select id="triage-sender-confidence" name="triage-sender-confidence">
+                <option value="unknown" selected>Unknown sender behavior</option>
+                <option value="spoof-signals">Spoof indicators visible</option>
+                <option value="verified">Verified through known channel</option>
+              </select>
+            </label>
+            <label for="triage-urgency-level">Urgency level
+              <select id="triage-urgency-level" name="triage-urgency-level">
+                <option value="extreme" selected>Extreme urgency or threat language</option>
+                <option value="high">High urgency</option>
+                <option value="medium">Medium urgency</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row two">
+            <label for="triage-link-pattern">Link pattern
+              <select id="triage-link-pattern" name="triage-link-pattern">
+                <option value="obfuscated" selected>Shortened or obfuscated link</option>
+                <option value="mismatch">Displayed URL mismatch</option>
+                <option value="clean">No suspicious link pattern</option>
+              </select>
+            </label>
+            <label for="triage-request-type">Request type
+              <select id="triage-request-type" name="triage-request-type">
+                <option value="credential" selected>Credential reset/login request</option>
+                <option value="payment">Payment or transfer request</option>
+                <option value="attachment">Attachment open/download request</option>
+                <option value="informational">Informational notice</option>
+              </select>
+            </label>
+          </div>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Triage Message</button>
+            <button id="triage-export" type="button" class="btn-secondary">Export Triage</button>
+          </div>
+        </form>
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="triage-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Risk Score</span><strong id="triage-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="triage-level">Low</strong></div>
+            <div class="kpi"><span class="microcopy">Verdict</span><strong id="triage-verdict">Needs Verification</strong></div>
+          </div>
+          <ul id="triage-recommendations" class="bullet-list"></ul>
+          <div id="triage-steps" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology and Decision Model</h2>
+        <p>Phishing attacks succeed because they exploit behavior timing, not because users are unaware of security basics. Messages are designed to create urgency and authority pressure before verification routines can start. This tool interrupts that sequence by forcing fast objective checks before the first click, reply, or attachment open.</p>
+        <p>The triage model is built around four practical indicators available to most users within seconds: sender confidence, urgency style, link behavior, and requested action. Combined scoring provides a fast risk signal that is useful even when message details are incomplete. It helps users avoid two common failures: trusting persuasive language too quickly and escalating every message without a repeatable threshold.</p>
+        <p>Operational value comes from output structure. The tool does not stop at risk labels. It provides immediate steps for evidence preservation, independent verification, and escalation timing. This matters because even correct suspicion can fail if the next actions are unclear or delayed.</p>
+        <p>Modern phishing often spans channels. Attackers may start in email, then continue in SMS or team chat with matching narrative. Sender familiarity alone is no longer sufficient. Verification must happen through known-good channels such as bookmarked portals, directory-confirmed contacts, or official support routes.</p>
+        <p>Teams can use triage output to improve controls over time. Repeated high-risk patterns reveal where filtering, user prompts, and training content need adjustment. Captured indicators also help incident teams move faster when suspicious activity expands beyond one inbox.</p>
+        <p>Message triage is also a governance control. Consistent triage criteria prevent selective enforcement, where some teams follow verification rigor while others rely on intuition. A shared scoring model makes cross-team communication clearer and reduces debate during high-pressure incidents.</p>
+        <p>Use triage outcomes to drive preventive controls. If your organization repeatedly sees the same impersonation pattern, update authentication prompts, vendor-payment workflows, and user education examples so the attack path becomes harder over time.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Pause before interacting with urgent credential or payment requests.</li>
+          <li>Verify sender identity through a separate trusted channel.</li>
+          <li>Inspect destination behavior before any link interaction.</li>
+          <li>Capture evidence before deleting or forwarding suspicious messages.</li>
+          <li>Escalate high-risk verdicts immediately with structured notes.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="implementation-heading">
+        <h2 id="implementation-heading">Implementation Notes</h2>
+        <p>Embed triage as a lightweight workflow in daily communication channels rather than as a separate emergency process. Users are more likely to follow security controls when they are fast, visible, and built into normal tasks. A triage standard that takes under one minute is more effective than a long policy that only appears after compromise.</p>
+        <p>Define escalation service levels for each risk tier. High-risk messages should trigger immediate reporting and temporary containment actions. Medium-risk messages require independent verification before action. Low-risk messages should still be logged with minimal metadata so decision quality can be reviewed and improved over time.</p>
+        <p>Run monthly triage retrospectives with representative examples. Compare false-positive and false-negative outcomes, then refine user guidance and technical filters. This feedback loop builds better detection habits and reduces long-term policy drift under operational pressure.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>An employee receives a message from a familiar display name requesting immediate invoice approval via an external link. The language references penalties and executive urgency. Without triage, the user clicks and lands on a fake sign-in page that captures credentials.</p>
+        <p>With this workflow, the message receives a high risk score due to urgency, link obfuscation, and payment context. Verification through a known internal contact confirms the request is fraudulent. No credential entry occurs, and captured message metadata helps the security team block similar attempts quickly.</p>
+        <p>This scenario repeats across personal accounts too. Users who pre-commit to triage steps are far less likely to act on manipulated urgency when attackers imitate trusted services.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Trusting display names without verifying actual sender path.</li>
+          <li>Clicking links first and investigating only after interaction.</li>
+          <li>Forwarding suspicious messages without safe context to teammates.</li>
+          <li>Deleting evidence before reporting malicious attempts.</li>
+          <li>Ignoring repeated medium-risk patterns that indicate campaign activity.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Can internal chat messages be phishing?</h3>
+          <p>Yes. Compromised internal accounts can impersonate trusted colleagues and request risky actions.</p>
+        </article>
+        <article>
+          <h3>Is sender display name enough to trust a message?</h3>
+          <p>No. Display names are easily spoofed and should never be your only trust signal.</p>
+        </article>
+        <article>
+          <h3>How should urgent payment requests be handled?</h3>
+          <p>Always verify via a known independent channel before any payment action.</p>
+        </article>
+        <article>
+          <h3>What if I already clicked the link?</h3>
+          <p>Preserve evidence, rotate exposed credentials, and follow your containment plan immediately.</p>
+        </article>
+        <article>
+          <h3>Should suspicious messages be deleted instantly?</h3>
+          <p>Collect key metadata first so response teams can investigate and improve defenses.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks" target="_blank" rel="noopener noreferrer">CISA Social Engineering Guidance</a></li>
+          <li><a href="https://www.ncsc.gov.uk/guidance/phishing" target="_blank" rel="noopener noreferrer">NCSC Phishing Guidance</a></li>
+          <li><a href="https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" target="_blank" rel="noopener noreferrer">FTC Phishing Scam Guidance</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/phishing-red-flags-checklist.html">Phishing Red Flags Checklist</a></li>
+          <li><a href="/guides/email-header-basics.html">Email Header Basics</a></li>
+          <li><a href="/guides/phishing-password-reset-safety.html">Phishing-Safe Password Reset Workflow</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/phishing-message-triage.js?v=20260305v1" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>

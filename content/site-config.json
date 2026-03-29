@@ -1,0 +1,274 @@
+{
+  "baseUrl": "https://oopsmypassword.web.app",
+  "brand": "OopsMyPassword",
+  "themeColor": "#0a0f14",
+  "adsenseClient": "ca-pub-5826652112388036",
+  "footerDisclaimer": "Educational guidance only. This site does not guarantee account security outcomes.",
+  "defaultAuthor": "OopsMyPassword Editorial Team",
+  "defaultReviewer": "Suraj Baishya",
+  "defaultReviewerTitle": "Developer and Security Tester",
+  "contactEmail": "anonyhelps.su@gmail.com",
+  "pages": [
+    {
+      "slug": "about",
+      "title": "About OopsMyPassword | Cybersecurity Education Hub",
+      "description": "Learn the mission, editorial process, and practical methodology behind OopsMyPassword cybersecurity guides and tools.",
+      "heading": "About OopsMyPassword",
+      "intro": "OopsMyPassword helps individuals and small teams make better day-to-day cybersecurity decisions through practical tools and implementation-focused guides.",
+      "includeAdsense": true,
+      "schemaType": "AboutPage",
+      "sections": [
+        {
+          "heading": "Mission and Scope",
+          "paragraphs": [
+            "We build security content for real-world use, not theoretical checklists that are hard to execute. Every guide is designed to reduce common failure patterns such as weak recovery workflows, phishing pressure mistakes, and inconsistent account hardening.",
+            "Our scope now covers identity security, phishing defense, device security, network safety, and incident response. The goal is to help users sequence controls correctly instead of applying random security actions with low impact.",
+            "The site is intentionally workflow-driven. Readers should be able to move from assessment to execution in minutes, then return to deeper implementation details when needed."
+          ]
+        },
+        {
+          "heading": "Author and Reviewer Model",
+          "paragraphs": [
+            "Primary authoring is handled by the OopsMyPassword Editorial Team, with final technical review by Suraj Baishya. Recommendations are assessed for practical feasibility, user comprehension, and measurable risk reduction.",
+            "Each major guide includes publication date, substantive update date, reviewer metadata, and source references from standards bodies or primary security organizations."
+          ]
+        },
+        {
+          "heading": "How Guidance Is Tested",
+          "paragraphs": [
+            "Guidance is tested against realistic constraints such as mobile-only access, limited device redundancy, account recovery lockout risk, and mixed personal/work account sprawl.",
+            "We avoid advice that is technically correct but operationally brittle. If a workflow is too complex to sustain, it is revised to improve compliance without lowering baseline safety."
+          ]
+        },
+        {
+          "heading": "Transparency Commitments",
+          "paragraphs": [
+            "We maintain visible policy pages for privacy, terms, editorial process, and contact details. When major guidance changes occur, we log substantive edits and update review timestamps.",
+            "Monetization decisions do not change editorial criteria. Content quality, source integrity, and user safety remain primary across all published pages."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact OopsMyPassword | Support and Security Disclosure",
+      "description": "Contact OopsMyPassword for feedback, corrections, security disclosures, and partnership inquiries.",
+      "heading": "Contact",
+      "intro": "Use this page for editorial corrections, security disclosures, partnerships, and product feedback.",
+      "includeAdsense": false,
+      "schemaType": "ContactPage",
+      "sections": [
+        {
+          "heading": "Primary Contact",
+          "paragraphs": [
+            "Email: <a href=\"mailto:anonyhelps.su@gmail.com\">anonyhelps.su@gmail.com</a>",
+            "Typical response window is 24 to 48 hours for normal inquiries. Complex security reports may require additional validation time."
+          ]
+        },
+        {
+          "heading": "Responsible Disclosure",
+          "paragraphs": [
+            "If you report a security issue, include affected URL, clear reproduction steps, expected impact, and mitigation suggestions if available.",
+            "Please avoid sharing sensitive personal data in email. If proof-of-concept material is necessary, provide minimal data required to validate risk.",
+            "Good-faith testing and coordinated disclosure are appreciated. Confirmed issues are prioritized by impact and exploitability."
+          ]
+        },
+        {
+          "heading": "Editorial Corrections",
+          "paragraphs": [
+            "If you identify factual errors, outdated references, or unclear instructions in any guide, send the page URL and a short correction proposal.",
+            "Validated corrections are published with a substantive update entry and adjusted review timestamp."
+          ]
+        },
+        {
+          "heading": "Partnership and Training Requests",
+          "paragraphs": [
+            "For collaboration requests, include audience size, objectives, timeline, and expected deliverables. We prioritize engagements with practical security outcomes and transparent user education standards."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "privacy",
+      "title": "Privacy Policy | OopsMyPassword",
+      "description": "Review OopsMyPassword privacy practices for local tool processing, analytics boundaries, and data minimization controls.",
+      "heading": "Privacy Policy",
+      "intro": "Effective date: February 28, 2026",
+      "includeAdsense": false,
+      "schemaType": "PrivacyPolicy",
+      "sections": [
+        {
+          "heading": "Data Minimization",
+          "paragraphs": [
+            "OopsMyPassword is designed to minimize sensitive data handling. Security tools are implemented for local decision support wherever practical, and we avoid account-based credential storage.",
+            "We do not request unnecessary personal identifiers for routine use of public educational content."
+          ]
+        },
+        {
+          "heading": "Local Processing and Tool Inputs",
+          "paragraphs": [
+            "Password and passphrase analysis is intended for local browser execution. Users should avoid pasting live credentials into shared systems or untrusted devices.",
+            "Export features are user-initiated and remain under user control. We recommend storing exported operational notes in a trusted environment."
+          ]
+        },
+        {
+          "heading": "Analytics Boundaries",
+          "paragraphs": [
+            "We may collect aggregate usage telemetry for reliability and product quality analysis. Telemetry is limited to non-sensitive behavioral signals such as route usage and feature interactions.",
+            "No analytics event should include raw passwords or equivalent credential material."
+          ]
+        },
+        {
+          "heading": "Third-Party Services",
+          "paragraphs": [
+            "Hosting and analytics infrastructure may rely on third-party providers. Those providers process technical request metadata under their own policy obligations.",
+            "Where ads are shown on allowed routes, third-party ad services may set or read cookies according to publisher and regional policy requirements."
+          ]
+        },
+        {
+          "heading": "User Responsibilities",
+          "paragraphs": [
+            "Users should validate device integrity, keep software updated, and enable MFA on high-impact accounts. Site guidance is educational and does not replace formal incident response obligations."
+          ]
+        },
+        {
+          "heading": "Policy Updates",
+          "paragraphs": [
+            "Material privacy changes are reflected on this page with an updated effective date. Significant workflow-impacting updates may also be reflected in editorial change logs."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "terms",
+      "title": "Terms of Use | OopsMyPassword",
+      "description": "Read OopsMyPassword terms of use including scope, limitations, acceptable use, and liability boundaries.",
+      "heading": "Terms of Use",
+      "intro": "Effective date: February 28, 2026",
+      "includeAdsense": false,
+      "schemaType": "WebPage",
+      "sections": [
+        {
+          "heading": "Acceptance",
+          "paragraphs": [
+            "By accessing or using OopsMyPassword, you agree to these Terms of Use. If you do not agree, discontinue use of the service."
+          ]
+        },
+        {
+          "heading": "Service Scope",
+          "paragraphs": [
+            "OopsMyPassword provides educational cybersecurity guidance, tools, and planning workflows. The service does not provide legal advice, guaranteed threat prevention, or managed security operations.",
+            "Recommendations are intended to support informed decision-making and must be adapted to each user's environment and obligations.",
+            "Some guides may include clearly labeled affiliate links to security products we believe are relevant for user workflows. Affiliate participation does not change our technical review criteria."
+          ]
+        },
+        {
+          "heading": "Affiliate Disclosure",
+          "paragraphs": [
+            "When an affiliate link is present, we may earn a commission if you purchase through that link at no additional cost to you.",
+            "Affiliate references are informational and should not be interpreted as guaranteed outcomes or personal financial advice."
+          ]
+        },
+        {
+          "heading": "No Guarantee",
+          "paragraphs": [
+            "Security outcomes depend on user behavior, platform controls, and threat conditions beyond our control. We do not guarantee uninterrupted availability, complete accuracy under every scenario, or immunity from compromise."
+          ]
+        },
+        {
+          "heading": "Acceptable Use",
+          "paragraphs": [
+            "You agree not to misuse the website, attempt unauthorized access, run abusive automated traffic, distribute malware, or disrupt normal operation.",
+            "You also agree not to present site guidance as guaranteed risk elimination in commercial or public claims."
+          ]
+        },
+        {
+          "heading": "Intellectual Property",
+          "paragraphs": [
+            "Unless noted otherwise, site content and tooling design are protected by applicable intellectual property rights. You may reference content with attribution, but unauthorized bulk reproduction is prohibited."
+          ]
+        },
+        {
+          "heading": "Limitation of Liability",
+          "paragraphs": [
+            "To the maximum extent permitted by applicable law, OopsMyPassword is not liable for indirect or consequential damages arising from use or inability to use this site."
+          ]
+        },
+        {
+          "heading": "Updates",
+          "paragraphs": [
+            "Terms may be revised as service capabilities evolve. Continued use after updates indicates acceptance of revised terms."
+          ]
+        },
+        {
+          "heading": "Contact",
+          "paragraphs": [
+            "Questions about these terms can be sent to <a href=\"mailto:anonyhelps.su@gmail.com\">anonyhelps.su@gmail.com</a>."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "editorial-policy",
+      "title": "Editorial Policy | OopsMyPassword",
+      "description": "Understand OopsMyPassword editorial standards, source policy, review workflow, correction protocol, and ad placement boundaries.",
+      "heading": "Editorial Policy",
+      "intro": "Effective date: February 28, 2026",
+      "includeAdsense": true,
+      "schemaType": "WebPage",
+      "sections": [
+        {
+          "heading": "Editorial Purpose",
+          "paragraphs": [
+            "OopsMyPassword publishes cybersecurity guidance focused on practical, testable user actions. Content is designed to reduce avoidable account and data exposure risk through structured workflows.",
+            "We prioritize clarity over jargon and measurable controls over fear-based claims."
+          ]
+        },
+        {
+          "heading": "Source and Evidence Standards",
+          "paragraphs": [
+            "Primary references should come from standards organizations, official platform documentation, and established security authorities. Secondary commentary is used only when it adds practical context and does not contradict primary guidance.",
+            "Each guide must include source references, publication/update dates, and review metadata."
+          ]
+        },
+        {
+          "heading": "Review Workflow",
+          "paragraphs": [
+            "Drafts are reviewed for technical correctness, implementation realism, and user comprehension under stress conditions.",
+            "Major content updates trigger revised review dates and change-log entries to maintain transparency."
+          ]
+        },
+        {
+          "heading": "Corrections Policy",
+          "paragraphs": [
+            "Confirmed factual errors are corrected promptly. Correction requests should include the page URL, disputed statement, and a reliable source.",
+            "Substantive corrections are reflected in page-level update metadata and guide change logs."
+          ]
+        },
+        {
+          "heading": "Monetization and Ad Placement",
+          "paragraphs": [
+            "Editorial decisions are independent of monetization. We do not create low-value pages for ad inventory expansion.",
+            "Ad script placement is intentionally limited to monetizable content routes such as home, guide hub/detail, FAQ, best practices, and selected high-context policy pages.",
+            "Legal utility pages and tool execution pages remain ad-free to protect task focus and reduce policy risk.",
+            "Some high-intent guides may contain clearly marked affiliate recommendations. These placements use sponsored link attributes and do not alter source requirements, fact-checking standards, or update cadence."
+          ]
+        },
+        {
+          "heading": "AI and Automation Use",
+          "paragraphs": [
+            "Automation may assist in drafting, formatting, and consistency checks, but final publication requires editorial verification and policy review.",
+            "We do not publish unverified generated claims or fabricated references."
+          ]
+        },
+        {
+          "heading": "Ownership and Contact",
+          "paragraphs": [
+            "Owner and lead reviewer: Suraj Baishya (Developer and Security Tester).",
+            "Contact: <a href=\"mailto:anonyhelps.su@gmail.com\">anonyhelps.su@gmail.com</a>."
+          ]
+        }
+      ]
+    }
+  ]
+}

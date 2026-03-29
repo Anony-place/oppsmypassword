@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Phishing Reset Safety Tool | OopsMyPassword</title>
+  <meta name="description" content="Evaluate password reset request risk and generate a safe, verified reset workflow.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/phishing-reset-safety/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Phishing Reset Safety Tool | OopsMyPassword">
+  <meta property="og:description" content="Detect risky reset flows and apply verified step-by-step password reset actions.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/phishing-reset-safety/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phishing Reset Safety Tool | OopsMyPassword">
+  <meta name="twitter:description" content="Score reset-request risk and generate next-24-hour anti-phishing reset workflow.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Phishing Reset Safety Tool",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/phishing-reset-safety/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Risk-scoring tool for suspicious password reset requests and phishing-safe recovery flows."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Should unsolicited reset links ever be trusted?", "acceptedAnswer": {"@type": "Answer", "text": "Only if independently verified through trusted channels; default behavior should be caution."}},
+        {"@type": "Question", "name": "What is the safest reset method?", "acceptedAnswer": {"@type": "Answer", "text": "Use official bookmarks or direct URL entry, not links from unverified messages."}},
+        {"@type": "Question", "name": "Do urgency messages indicate phishing?", "acceptedAnswer": {"@type": "Answer", "text": "High-pressure urgency language is a common phishing signal and should raise risk."}},
+        {"@type": "Question", "name": "Is HTTPS enough for trust?", "acceptedAnswer": {"@type": "Answer", "text": "No. Attackers can host HTTPS pages on deceptive domains."}},
+        {"@type": "Question", "name": "Why keep a reset workflow playbook?", "acceptedAnswer": {"@type": "Answer", "text": "Playbooks reduce panic-driven mistakes during incidents and suspicious alerts."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Phishing Reset Safety</h1>
+        <p>Assess reset request trust signals and produce a verified reset workflow so urgent messages do not push you into attacker-controlled pages.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge risk">Verification Required</span>
+        </div>
+        <form id="phishing-reset-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="reset-trigger">Reset trigger source
+              <select id="reset-trigger" name="reset-trigger">
+                <option value="user-initiated" selected>User initiated manually</option>
+                <option value="unexpected-security">Unexpected security message</option>
+                <option value="unsolicited">Unsolicited email/message</option>
+              </select>
+            </label>
+            <label for="url-verification">URL/domain verification
+              <select id="url-verification" name="url-verification">
+                <option value="verified" selected>Fully verified</option>
+                <option value="partial">Partially verified</option>
+                <option value="unknown">Unknown or suspicious</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row two">
+            <label for="urgency-language">Urgency language level
+              <select id="urgency-language" name="urgency-language">
+                <option value="none" selected>None</option>
+                <option value="medium">Moderate urgency</option>
+                <option value="high">High-pressure urgency</option>
+              </select>
+            </label>
+            <label for="attachment-or-link">Attachment/link trust
+              <select id="attachment-or-link" name="attachment-or-link">
+                <option value="trusted" selected>No suspicious attachment/link</option>
+                <option value="unknown">Unknown link behavior</option>
+                <option value="suspicious">Suspicious attachment or domain</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Check Reset Safety</button>
+            <button id="phishing-export" type="button" class="btn-secondary">Export Plan</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="phishing-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Risk Score</span><strong id="phishing-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="phishing-level">Low</strong></div>
+          </div>
+          <p id="phishing-headline">Provide reset context to evaluate phishing probability.</p>
+          <ul id="phishing-recommendations" class="bullet-list"></ul>
+          <div id="phishing-next24" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology: Reset Flows Are a Prime Social Engineering Surface</h2>
+        <p>Attackers know users fear lockout, so they design phishing campaigns around urgent password-reset prompts. Instead of cracking credentials directly, they trigger panic and redirect users to look-alike domains. Once users enter credentials, attackers gain immediate access without complex exploit chains.</p>
+        <p>This tool scores reset risk by combining trigger legitimacy, domain verification confidence, urgency pressure, and link behavior. These dimensions mirror how real phishing flows manipulate decisions. The model intentionally penalizes uncertainty, because ambiguous context during reset is itself a risk condition.</p>
+        <p>Behavioral design matters here. Under stress, users default to speed and pattern-matching. A familiar logo, urgent text, and a "secure" padlock can override careful verification. This tool counters that by forcing explicit trust checks before action and by providing a strict next-step workflow when risk is elevated.</p>
+        <p>The output is not just a warning. It provides a concrete sequence: stop interaction, navigate independently, verify domain, reset safely, and monitor for replay. This sequence is critical because users often stop after a single password change while attackers keep active sessions or altered recovery settings.</p>
+        <p>In organizations, reset safety should be operationalized like incident response. Exported plans can be shared with support teams so user reports are handled consistently. Without a repeatable model, each incident is handled ad hoc and errors become systemic.</p>
+        <p>The tool also reinforces a key principle: HTTPS is necessary but insufficient. Attackers can host encrypted phishing pages on deceptive domains. True verification requires domain precision, source validation, and independent navigation habits.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Never trust urgent reset links by default; verify from independent entry path.</li>
+          <li>Compare full domain, not just logo or partial hostname.</li>
+          <li>Reset credentials from trusted device and network context.</li>
+          <li>Revoke sessions after reset to remove attacker persistence.</li>
+          <li>Enable MFA and verify recovery settings after any suspicious reset event.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="operations-heading">
+        <h2 id="operations-heading">Operational Anti-Phishing Notes</h2>
+        <p>Reset phishing succeeds because it intercepts high-stress moments where users are already primed to act. Effective defense requires pre-commitment to a verification rule set before incidents occur. Teams should document a single reset entry method, such as trusted bookmarks or direct URL entry, and train users to reject all alternative reset paths by default unless verified through official support channels.</p>
+        <p>Domain review quality can be improved with simple controls: browser password managers with strict domain match, internal communication templates showing official reset URLs, and user training on subdomain impersonation patterns. These controls reduce reliance on memory and improve consistency under pressure. The tool's risk model intentionally elevates uncertainty because uncertain verification usually leads to unsafe action.</p>
+        <p>After suspicious reset events, monitoring should continue even if no compromise is confirmed. Attackers often test user behavior in waves and return later with improved lures. A short watch period for abnormal login prompts, unexpected MFA events, and recovery-change notifications can prevent delayed compromise from succeeding.</p>
+        <p>Organizations should periodically run controlled phishing-reset simulations to validate user behavior against policy. Simulation outcomes highlight where verification guidance is unclear or where communication channels need hardening. When users repeatedly fail the same pattern, update workflow design rather than only repeating awareness messaging. The strongest anti-phishing posture combines user behavior design, technical controls, and incident-ready escalation paths.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A user receives a "final warning" email saying account access will be suspended in 15 minutes. The email links to a cloned reset page with a similar domain and valid HTTPS certificate. The user enters credentials quickly and confirms OTP, unintentionally handing access to the attacker.</p>
+        <p>If the user had applied a verified reset workflow, they would have opened the service from a known bookmark, compared the domain, and avoided the attacker page entirely. The incident would have ended as a suspicious message instead of a credential compromise.</p>
+        <p>For teams, this pattern often appears in finance and support roles where urgency is constant. Standardized reset safety checks significantly reduce successful phishing outcomes.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Clicking reset links from unsolicited messages.</li>
+          <li>Trusting HTTPS alone as evidence of legitimacy.</li>
+          <li>Ignoring domain typos and subdomain tricks.</li>
+          <li>Skipping post-reset session and recovery review.</li>
+          <li>Failing to document suspicious reset attempts for monitoring.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Should unsolicited reset links be trusted?</h3>
+          <p>Only after independent verification; default behavior should be caution.</p>
+        </article>
+        <article>
+          <h3>What is the safest reset method?</h3>
+          <p>Use bookmarks or direct URL entry to official sites rather than message links.</p>
+        </article>
+        <article>
+          <h3>Do urgency messages indicate phishing?</h3>
+          <p>High-pressure urgency is a strong risk signal and should trigger verification mode.</p>
+        </article>
+        <article>
+          <h3>Is HTTPS enough?</h3>
+          <p>No. Domain integrity and source trust still need explicit confirmation.</p>
+        </article>
+        <article>
+          <h3>Why keep a reset playbook?</h3>
+          <p>Playbooks reduce panic errors and support consistent team response under pressure.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://www.cisa.gov/secure-our-world/recognize-report-phishing" target="_blank" rel="noopener noreferrer">CISA: Recognize and Report Phishing</a></li>
+          <li><a href="https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" target="_blank" rel="noopener noreferrer">FTC: Avoid Phishing Scams</a></li>
+          <li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/phishing-password-reset-safety.html">Phishing-Safe Password Reset Workflow</a></li>
+          <li><a href="/guides/breach-response-checklist.html">Password Breach Response Checklist</a></li>
+          <li><a href="/guides/account-recovery-hardening-checklist.html">Account Recovery Hardening Checklist</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/phishing-reset-safety.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

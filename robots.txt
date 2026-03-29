@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://oopsmypassword.web.app/sitemap.xml
+Sitemap: https://oopsmypassword.web.app/sitemap-tools.xml
+Sitemap: https://oopsmypassword.web.app/sitemap-guides.xml
+Sitemap: https://oopsmypassword.web.app/sitemap-index.xml

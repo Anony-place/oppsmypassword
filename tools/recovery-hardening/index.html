@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Recovery Hardening Tool | OopsMyPassword</title>
+  <meta name="description" content="Assess recovery-channel risk for email, SIM, backup codes, MFA backup, and trusted devices with a practical 24-hour hardening plan.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/recovery-hardening/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Recovery Hardening Tool | OopsMyPassword">
+  <meta property="og:description" content="Harden account recovery paths before attackers use them to bypass strong passwords.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/recovery-hardening/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recovery Hardening Tool | OopsMyPassword">
+  <meta name="twitter:description" content="Score and fix recovery weaknesses that often enable account takeover bypass.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Recovery Hardening Tool",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/recovery-hardening/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Risk scoring and remediation workflow for account recovery channel hardening."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Why focus on recovery channels?", "acceptedAnswer": {"@type": "Answer", "text": "Recovery channels are common bypass paths when primary authentication is strong."}},
+        {"@type": "Question", "name": "Are backup codes really critical?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Missing or exposed backup codes can cause lockout or unauthorized re-entry."}},
+        {"@type": "Question", "name": "How often should trusted devices be reviewed?", "acceptedAnswer": {"@type": "Answer", "text": "At least quarterly and after major device changes."}},
+        {"@type": "Question", "name": "What is a high SIM risk signal?", "acceptedAnswer": {"@type": "Answer", "text": "Carrier account without SIM lock/PIN and weak identity verification settings."}},
+        {"@type": "Question", "name": "Can recovery hardening replace MFA?", "acceptedAnswer": {"@type": "Answer", "text": "No. Recovery hardening complements MFA and strong credential hygiene."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Recovery Hardening</h1>
+        <p>Evaluate whether your recovery paths are resilient or easily abused. Strong passwords are not enough if attackers can bypass them through weak recovery controls.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge warn">Bypass Risk Analysis</span>
+        </div>
+        <form id="recovery-hardening-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="recovery-email-quality">Recovery email quality
+              <select id="recovery-email-quality" name="recovery-email-quality">
+                <option value="strong" selected>Dedicated + MFA protected</option>
+                <option value="medium">Mixed quality</option>
+                <option value="shared">Shared/weak mailbox</option>
+                <option value="unknown">Unknown status</option>
+              </select>
+            </label>
+            <label for="sim-risk">SIM risk level
+              <select id="sim-risk" name="sim-risk">
+                <option value="low" selected>Carrier lock/PIN enabled</option>
+                <option value="medium">Partial controls</option>
+                <option value="high">No clear carrier protection</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row three">
+            <label for="backup-codes">Backup codes
+              <select id="backup-codes" name="backup-codes">
+                <option value="stored-offline" selected>Stored offline safely</option>
+                <option value="stored-online">Stored online in mixed locations</option>
+                <option value="missing">Missing or unknown</option>
+              </select>
+            </label>
+            <label for="mfa-backup">MFA backup factors
+              <select id="mfa-backup" name="mfa-backup">
+                <option value="enabled" selected>Enabled and tested</option>
+                <option value="unknown">Unknown</option>
+                <option value="disabled">Disabled</option>
+              </select>
+            </label>
+            <label for="trusted-devices">Trusted devices
+              <select id="trusted-devices" name="trusted-devices">
+                <option value="clean" selected>Reviewed and clean</option>
+                <option value="stale">Contains stale devices</option>
+                <option value="unknown">Never reviewed</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Evaluate Recovery</button>
+            <button id="recovery-export" type="button" class="btn-secondary">Export Plan</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="recovery-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Bypass Risk Score</span><strong id="recovery-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="recovery-level">Low</strong></div>
+          </div>
+          <p id="recovery-headline">Select your current controls to calculate recovery bypass risk.</p>
+          <ul id="recovery-recommendations" class="bullet-list"></ul>
+          <div id="recovery-next24" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology: Recovery Is the Real Root of Account Control</h2>
+        <p>Security teams often focus on passwords and MFA while underestimating recovery channels. In many compromise cases, attackers do not brute force strong credentials. They target recovery pathways where identity checks are weaker, controls are outdated, or ownership is unclear. This includes stale phone numbers, weak backup email accounts, unreviewed trusted devices, and exposed backup codes.</p>
+        <p>This tool converts those hidden weaknesses into a visible score and concrete remediation flow. Each input maps to bypass potential. Shared recovery inboxes, unprotected SIM accounts, and unknown trusted device inventories raise risk quickly because they allow silent access restoration even after password changes.</p>
+        <p>Why does this matter psychologically? Because users tend to stop work once a password reset is complete. Recovery hardening is less visible and often delayed, yet it determines whether an attacker can return later. By surfacing next-24-hour tasks with explicit sequence, the interface counters false completion bias and keeps mitigation on track.</p>
+        <p>Another design priority is maintaining control under complexity. Recovery channels span platforms, carriers, and devices. Users can become overwhelmed and skip critical checks. This tool reduces complexity by focusing on five high-impact dimensions and translating them into immediate actions. It is intentionally conservative: if status is unknown, risk increases, because uncertainty itself is operational risk during incidents.</p>
+        <p>In team environments, this model also improves accountability. Exported output captures what was assumed and what must be verified, enabling handoff between account owners and responders. Without that shared artifact, recovery hygiene is often fragmented and reversible.</p>
+        <p>The objective is not only to avoid lockout, but to prevent attacker persistence. A resilient account recovery model ensures that when credentials are rotated, control remains with the legitimate owner and does not silently drift back to adversaries through forgotten channels.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Protect recovery email with unique credentials and MFA before relying on it.</li>
+          <li>Enable carrier account PIN/SIM lock to reduce swap risk.</li>
+          <li>Store backup codes offline and test retrieval workflow quarterly.</li>
+          <li>Review trusted devices after each major device replacement.</li>
+          <li>Document recovery ownership for shared or team-managed accounts.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="operations-heading">
+        <h2 id="operations-heading">Operational Hardening Notes</h2>
+        <p>Recovery controls degrade silently over time, especially when users change phone numbers, upgrade devices, or switch communication platforms. Because these changes feel administrative, they are often not treated as security events. A reliable process marks every identity-channel change as a required recovery review trigger. This one rule catches a large portion of latent bypass risk before attackers can exploit it.</p>
+        <p>For business environments, recovery-hardening should be attached to onboarding and offboarding workflows. New users need verified backup factors, and departing users require immediate trusted-device and recovery-channel cleanup. Without integration into lifecycle workflows, recovery hygiene becomes an ad-hoc task and stale access persists long after account ownership changes.</p>
+        <p>Controls should also be tested, not merely configured. Many teams discover missing backup codes or invalid recovery paths only during active incidents. A short quarterly drill where one account is recovered using documented procedures creates strong assurance at low operational cost. This tool's output is designed to seed that drill process.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A user enables strong passwords and MFA everywhere but keeps an old recovery phone number attached to primary email. After carrier reassignment, an attacker uses that number for recovery and regains control despite strong primary credentials.</p>
+        <p>With structured recovery hardening, the stale number would have been removed, backup methods verified, and trusted devices reviewed. This closes the bypass route that most users never inspect until after compromise.</p>
+        <p>For organizations, this scenario scales quickly: employee offboarding can leave stale trusted devices and legacy recovery emails if controls are not explicitly audited.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Assuming password strength alone prevents account takeover.</li>
+          <li>Leaving old phone numbers on sensitive accounts.</li>
+          <li>Storing backup codes in insecure cloud notes.</li>
+          <li>Never reviewing trusted devices after hardware changes.</li>
+          <li>Using shared team inboxes as recovery roots without clear owner.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Why focus on recovery channels?</h3>
+          <p>Because attackers frequently bypass strong authentication through weaker recovery paths.</p>
+        </article>
+        <article>
+          <h3>Are backup codes critical?</h3>
+          <p>Yes. Missing or mishandled codes can cause lockout or facilitate takeover.</p>
+        </article>
+        <article>
+          <h3>How often to review trusted devices?</h3>
+          <p>Quarterly, and immediately after major device replacement or incident activity.</p>
+        </article>
+        <article>
+          <h3>What is high SIM risk?</h3>
+          <p>No SIM lock/PIN and unclear carrier account protections are key warning signs.</p>
+        </article>
+        <article>
+          <h3>Can hardening replace MFA?</h3>
+          <p>No. Hardening complements MFA and credential quality; it does not replace them.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B</a></li>
+          <li><a href="https://www.cisa.gov/secure-our-world" target="_blank" rel="noopener noreferrer">CISA Secure Our World</a></li>
+          <li><a href="https://consumer.ftc.gov/topics/identity-theft" target="_blank" rel="noopener noreferrer">FTC Identity Theft Resources</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/account-recovery-hardening-checklist.html">Account Recovery Hardening Checklist</a></li>
+          <li><a href="/guides/breach-response-checklist.html">Password Breach Response Checklist</a></li>
+          <li><a href="/guides/passkeys-backup-recovery.html">Passkeys Backup and Recovery Checklist</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/recovery-hardening.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

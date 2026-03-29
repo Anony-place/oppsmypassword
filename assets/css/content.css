@@ -1,0 +1,117 @@
+.content-main {
+  display: grid;
+  gap: 16px;
+}
+
+.content-header h1 {
+  margin-bottom: 10px;
+}
+
+.content-header p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+}
+
+.content-card p,
+.content-card li {
+  color: var(--text-soft);
+  font-size: 0.96rem;
+}
+
+.content-card p {
+  margin: 0 0 12px;
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+.content-card ul,
+.content-card ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.content-card li + li {
+  margin-top: 7px;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.guide-card {
+  border: 1px solid var(--soft-border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--surface-muted);
+}
+
+.guide-card h3 {
+  margin-bottom: 6px;
+}
+
+.guide-card p {
+  margin-bottom: 10px;
+}
+
+.guide-card a {
+  font-weight: 600;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 24px;
+}
+
+.checklist li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--strong);
+  font-weight: 700;
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.cta-card p {
+  margin: 0;
+}
+
+.faq-list article + article {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--soft-border);
+}
+
+.faq-list h2,
+.faq-list h3 {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .guide-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

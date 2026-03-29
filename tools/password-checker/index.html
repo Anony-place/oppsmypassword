@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Password Checker Tool | OopsMyPassword</title>
+  <meta name="description" content="Assess password risk with entropy, crack-time estimates, and account-criticality framing. Get top fixes and a 24-hour action plan.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/password-checker/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Password Checker Tool | OopsMyPassword">
+  <meta property="og:description" content="Run a local password assessment with account-target thresholds and immediate hardening actions.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/password-checker/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Password Checker Tool | OopsMyPassword">
+  <meta name="twitter:description" content="Score credential strength and get a practical next-24-hour security plan.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Password Checker Tool",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/password-checker/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Local password assessment tool with risk framing by account criticality."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Does the tool upload passwords?", "acceptedAnswer": {"@type": "Answer", "text": "No. Password analysis runs locally in your browser."}},
+        {"@type": "Question", "name": "Why does account criticality matter?", "acceptedAnswer": {"@type": "Answer", "text": "The same password quality can be acceptable for low-impact accounts but unsafe for identity hubs."}},
+        {"@type": "Question", "name": "Can this score guarantee safety?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a risk estimate and should be combined with MFA and recovery hardening."}},
+        {"@type": "Question", "name": "What is the first fix to apply?", "acceptedAnswer": {"@type": "Answer", "text": "Increase length and remove reuse before adding cosmetic complexity."}},
+        {"@type": "Question", "name": "Should I export results?", "acceptedAnswer": {"@type": "Answer", "text": "Export helps track hardening progress across account tiers without storing raw passwords."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Password Checker</h1>
+        <p>Assess credential risk with local entropy analysis, crack-time estimation, and account-criticality targets so you can decide what must be fixed now versus later.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge good">Local Processing</span>
+        </div>
+        <form id="password-checker-form" class="tool-form" novalidate>
+          <label for="password-value">Password
+            <input id="password-value" name="password-value" type="password" autocomplete="off" placeholder="Type password for local analysis only">
+          </label>
+          <div class="form-row two">
+            <label for="account-criticality">Account criticality
+              <select id="account-criticality" name="account-criticality">
+                <option value="critical">Critical (email, banking)</option>
+                <option value="high">High (work, cloud, social)</option>
+                <option value="standard" selected>Standard</option>
+              </select>
+            </label>
+            <label>&nbsp;
+              <button id="checker-generate" type="button" class="btn-secondary">Generate Example Password</button>
+            </label>
+          </div>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Assess Password</button>
+            <button id="checker-export" type="button" class="btn-secondary">Export Result</button>
+          </div>
+        </form>
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="checker-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Score</span><strong id="checker-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Risk Level</span><strong id="checker-level">Low</strong></div>
+            <div class="kpi"><span class="microcopy">Crack-Time</span><strong id="checker-crack">&lt;1 second</strong></div>
+          </div>
+          <p id="checker-headline">Assess a password to view criticality-aligned risk context.</p>
+          <ul id="checker-recommendations" class="bullet-list"></ul>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">How This Works and Why It Reduces Mistakes</h2>
+        <p>Most password advice fails because it treats every account as if the stakes are equal. In practice, account impact is uneven. Your primary email can reset almost every other login, while a low-value forum account may have limited blast radius. This tool uses the same technical score model across inputs but reframes output by account criticality so users can act with correct urgency.</p>
+        <p>The underlying check combines length influence, character diversity, pattern penalties, and dictionary penalties into a deterministic score. Crack-time estimation uses effective entropy and a consistent attacker-speed model. The objective is not to predict an exact compromise timeline; it is to provide comparable risk context that supports action prioritization.</p>
+        <p>Psychologically, users under stress do better with constrained output. Instead of a long list of generic warnings, this tool emphasizes top fixes and an immediate next-step framing. By limiting recommendation set size and tying it to criticality thresholds, the interface lowers cognitive load and increases follow-through.</p>
+        <p>Another important design choice is local processing. When users believe inputs might be uploaded, they self-censor and test fake passwords, which destroys tool utility. Local execution removes that friction and increases valid testing behavior. The result is better decisions with less hesitation, especially for users who are currently rotating credentials after an incident.</p>
+        <p>Color semantics remain fixed: green indicates readiness, amber indicates caution, and red indicates urgent weakness. Keeping this mapping consistent across tools prevents interpretation errors when users move from password assessment to breach response or recovery hardening.</p>
+        <p>The score should never be treated as a guarantee. Real-world compromise depends on phishing exposure, malware, credential reuse, and service-side controls. That is why this page links directly to complementary tools and guides that address incident response and recovery-channel integrity beyond raw password quality.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Set critical accounts to higher threshold before accepting a password as complete.</li>
+          <li>Eliminate reuse first, then optimize composition and memorability.</li>
+          <li>Store final credentials in a trusted manager to prevent fallback to weak variants.</li>
+          <li>Enable MFA immediately after high-value password changes.</li>
+          <li>Re-test after each change and keep exported progress snapshots for audit.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="implementation-heading">
+        <h2 id="implementation-heading">Implementation Notes for Teams and Individuals</h2>
+        <p>In individual workflows, this tool is most effective when paired with an account inventory. Users should classify accounts by impact before running assessments so output thresholds are interpreted correctly. Without inventory context, even accurate scores can drive mis-prioritized work because users do not know which credentials should be hardened first. A simple inventory with account name, account class, MFA status, and recovery sensitivity is enough to create immediate clarity.</p>
+        <p>In team settings, the checker can be used as a policy reinforcement mechanism without collecting plaintext credentials. Team leads can standardize target ranges by account tier and ask users to report only score bands and action completion status. This maintains privacy while still enabling measurable progress. It also avoids harmful practices where users share live credentials for review. The export payload is designed exactly for this governance model and can be archived as a procedural artifact.</p>
+        <p>Operationally, re-testing cadence matters. A one-time scan creates a false sense of closure, especially in environments where users create new accounts frequently. A better baseline is monthly reassessment of Tier 1 accounts, quarterly sweep of Tier 2 accounts, and immediate re-check after any suspected incident. This rhythm keeps the checker useful as a control loop rather than a one-off diagnostic.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A user receives a breach notice and starts rotating passwords quickly. They create a stronger string but apply it uniformly across email, shopping, and social platforms. The raw score looks acceptable, but the criticality context is missing. Email remains below safe target, creating a hidden takeover path.</p>
+        <p>Using this tool with account-criticality framing would elevate urgency for the email credential and demand additional strengthening before completion. This prevents a common failure mode where users stop after one pass and assume all accounts are equally protected.</p>
+        <p>In team environments, the same logic helps security leads communicate policy without overwhelming people. Instead of broadcasting abstract complexity rules, they can define threshold expectations by account tier and use exported tool output for coaching and verification.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Using one “strong” password across multiple services.</li>
+          <li>Treating symbol swaps as a substitute for length.</li>
+          <li>Skipping MFA because score appears high.</li>
+          <li>Ignoring recovery-channel risk while improving passwords.</li>
+          <li>Failing to retest after minor edits.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Does the tool upload passwords?</h3>
+          <p>No. Analysis runs locally in your browser and does not require account login.</p>
+        </article>
+        <article>
+          <h3>Why does account criticality matter?</h3>
+          <p>A password that is acceptable for a low-impact account may be insufficient for identity hubs like email or banking.</p>
+        </article>
+        <article>
+          <h3>Can this score guarantee safety?</h3>
+          <p>No. It is an estimate and should be combined with MFA, anti-phishing behavior, and recovery hardening.</p>
+        </article>
+        <article>
+          <h3>What should I improve first?</h3>
+          <p>Fix reuse and length issues first, then optimize for randomness and account-specific uniqueness.</p>
+        </article>
+        <article>
+          <h3>Why export results?</h3>
+          <p>Exports help track progress over time and support team or personal hardening workflows without storing raw credentials.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B</a></li>
+          <li><a href="https://www.cisa.gov/secure-our-world/use-strong-passwords" target="_blank" rel="noopener noreferrer">CISA Strong Password Guidance</a></li>
+          <li><a href="https://owasp.org/www-community/attacks/Credential_stuffing" target="_blank" rel="noopener noreferrer">OWASP Credential Stuffing Overview</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/password-mistakes.html">Most Common Password Mistakes and Fixes</a></li>
+          <li><a href="/guides/password-length-vs-complexity.html">Password Length vs Complexity</a></li>
+          <li><a href="/guides/unique-passwords-every-account.html">Why Every Account Needs a Unique Password</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/password-checker.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>MFA Method Selector | OopsMyPassword</title>
+  <meta name="description" content="Select an MFA baseline by account tier, threat profile, and recovery readiness with practical rollout steps.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/mfa-method-selector/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/img/icons/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MFA Method Selector | OopsMyPassword">
+  <meta property="og:description" content="Choose the right MFA method for each account class without creating lockout-driven rollback risk.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/mfa-method-selector/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MFA Method Selector | OopsMyPassword">
+  <meta name="twitter:description" content="Map MFA strength to account impact, threat model, and recovery readiness.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MFA Method Selector",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/mfa-method-selector/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Select practical MFA methods using account risk and recovery constraints."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Should all accounts use hardware keys?", "acceptedAnswer": {"@type": "Answer", "text": "Not immediately. Prioritize hardware-backed methods for identity roots and privileged accounts first."}},
+        {"@type": "Question", "name": "Is SMS MFA acceptable for critical accounts?", "acceptedAnswer": {"@type": "Answer", "text": "It can be transitional, but high-impact accounts should move to phishing-resistant methods when available."}},
+        {"@type": "Question", "name": "How many backup methods are recommended?", "acceptedAnswer": {"@type": "Answer", "text": "At least two independent backup options are recommended for critical account classes."}},
+        {"@type": "Question", "name": "Can passkeys replace MFA planning?", "acceptedAnswer": {"@type": "Answer", "text": "Passkeys improve resistance but recovery and device-loss planning remain mandatory."}},
+        {"@type": "Question", "name": "What causes MFA rollouts to fail most often?", "acceptedAnswer": {"@type": "Answer", "text": "Weak recovery planning and unmanaged exceptions are the most common root causes."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>MFA Method Selector</h1>
+        <p>Choose authentication factors by impact, threat model, usability pressure, and recovery resilience so rollout decisions remain secure and sustainable.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge good">Tier-Aware Selection</span>
+        </div>
+        <form id="mfa-selector-form" class="tool-form" novalidate>
+          <div class="form-row two">
+            <label for="mfa-account-tier">Account tier
+              <select id="mfa-account-tier" name="mfa-account-tier">
+                <option value="critical" selected>Critical (email, banking, admin)</option>
+                <option value="high">High (work, cloud, social)</option>
+                <option value="standard">Standard</option>
+              </select>
+            </label>
+            <label for="mfa-threat-model">Threat model
+              <select id="mfa-threat-model" name="mfa-threat-model">
+                <option value="phishing" selected>Phishing and social engineering</option>
+                <option value="sim-swap">SIM swap and telecom abuse</option>
+                <option value="device-loss">Device theft or loss</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row two">
+            <label for="mfa-usability-priority">Usability priority
+              <select id="mfa-usability-priority" name="mfa-usability-priority">
+                <option value="balanced" selected>Balanced</option>
+                <option value="max-security">Maximum security</option>
+                <option value="low-friction">Low friction</option>
+              </select>
+            </label>
+            <label for="mfa-recovery-readiness">Recovery readiness
+              <select id="mfa-recovery-readiness" name="mfa-recovery-readiness">
+                <option value="medium" selected>Medium (partial backups)</option>
+                <option value="strong">Strong (tested backups)</option>
+                <option value="weak">Weak (single-device dependence)</option>
+              </select>
+            </label>
+          </div>
+          <div class="tool-actions">
+            <button type="submit" class="btn-primary">Evaluate MFA Baseline</button>
+            <button id="mfa-export" type="button" class="btn-secondary">Export Plan</button>
+          </div>
+        </form>
+        <div class="result-panel" aria-live="polite">
+          <div class="meter" aria-hidden="true"><div id="mfa-meter-fill" class="meter-fill"></div></div>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Suitability Score</span><strong id="mfa-score">0 / 100</strong></div>
+            <div class="kpi"><span class="microcopy">Readiness Level</span><strong id="mfa-level">Critical</strong></div>
+            <div class="kpi"><span class="microcopy">Recommended Method</span><strong id="mfa-method">Authenticator App + Recovery Codes</strong></div>
+          </div>
+          <ul id="mfa-recommendations" class="bullet-list"></ul>
+          <div id="mfa-steps" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology and Decision Model</h2>
+        <p>MFA decisions fail when one default is forced across every account class. The same method can be acceptable for low-impact services but dangerously weak for identity hubs that unlock everything else. This tool treats account impact as the primary variable, then adjusts recommendations based on attack model and recovery constraints so security choices are context aware instead of checklist driven.</p>
+        <p>Phishing risk and recovery readiness are modeled together because many teams optimize one while neglecting the other. A deployment can look strong on paper yet collapse in a lockout event if backup factors are missing or poorly distributed. The selector therefore avoids output that looks strict but is operationally brittle. It pushes for stronger methods while requiring fallback validation before rollout is marked complete.</p>
+        <p>Another practical challenge is exception creep. Privileged users often keep weaker factors due to convenience, temporary travel constraints, or legacy system access. Over time those temporary exceptions become permanent. This page is built to reduce that drift by turning method choice into explicit policy output with near-term corrective steps.</p>
+        <p>For personal use, this model helps prevent mis-prioritization where social accounts are hardened while primary email and recovery numbers remain weak. For teams, it supports role-based standards that help administrators, help-desk staff, and end users align on the same selection logic. Consistency reduces confusion and improves incident response speed when credentials are challenged.</p>
+        <p>The output intentionally includes implementation sequence, not just one recommendation line. Security control selection only works when linked to execution order, ownership, and verification checkpoints. That is why the tool provides a 24-hour action plan rather than a static score alone.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Classify accounts by impact before choosing method defaults.</li>
+          <li>Prefer phishing-resistant factors for identity roots and admin roles.</li>
+          <li>Maintain at least two backup paths for critical accounts.</li>
+          <li>Document exceptions with explicit expiry and compensating controls.</li>
+          <li>Test sign-in and recovery on a secondary device before enforcement.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="implementation-heading">
+        <h2 id="implementation-heading">Implementation Notes</h2>
+        <p>Begin with a small account-tier matrix and attach required methods to each tier. Tier 1 should include primary email, payment platforms, cloud administration, and any account that can reset other credentials. Tier 2 can include work collaboration and communication accounts. Tier 3 can use transitional settings while backlog cleanup happens. This structure prevents random rollout that leaves root accounts under-protected.</p>
+        <p>Train support and operations teams on fallback handling before strong factor enforcement. The most common failure pattern is emergency downgrade during lockout because help channels are unprepared. Recovery codes, trusted-device validation, and exception approval paths should be tested in controlled drills to avoid panic-driven policy bypass.</p>
+        <p>Track method quality monthly. Measure share of privileged accounts on phishing-resistant factors, number of unresolved temporary exceptions, and recovery test success rates. These metrics make drift visible and create a practical loop for improving policy without blocking daily operations.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A security team enabled app-based MFA broadly but left executive and admin accounts on SMS fallback due to travel convenience. During a telecom fraud event, one key number was targeted and reset attempts appeared across linked services. Although overall MFA adoption looked high, the highest-impact accounts remained on weaker controls and incident pressure exposed the gap quickly.</p>
+        <p>If the team had selected methods by tier and threat model, privileged roles would have moved first to stronger factors with backup-path testing. The same model also would have constrained exceptions with expiry, reducing long-term exposure from convenience-driven decisions.</p>
+        <p>For individuals the pattern is similar: lower-value accounts get cleaner setup while recovery email and financial logins stay on legacy methods. Prioritized selection fixes this imbalance and delivers stronger outcomes with less wasted effort.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Defaulting to SMS MFA for all account tiers.</li>
+          <li>Skipping backup-factor testing before rollout completion.</li>
+          <li>Allowing indefinite exceptions for privileged users.</li>
+          <li>Ignoring device-loss recovery pathways until incident time.</li>
+          <li>Tracking adoption counts without quality and resilience metrics.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Should all accounts use hardware keys?</h3>
+          <p>Not immediately. Apply strongest methods to identity and admin roots first, then expand with phased coverage.</p>
+        </article>
+        <article>
+          <h3>Is SMS MFA acceptable for critical accounts?</h3>
+          <p>It can be temporary in constrained environments, but critical systems should move to stronger methods as soon as feasible.</p>
+        </article>
+        <article>
+          <h3>How many backup options should I keep?</h3>
+          <p>At least two independent backup options are recommended for high-impact account classes.</p>
+        </article>
+        <article>
+          <h3>Can passkeys remove the need for MFA planning?</h3>
+          <p>No. Passkeys improve resistance, but recovery architecture and exception governance still matter.</p>
+        </article>
+        <article>
+          <h3>What breaks MFA rollout most often?</h3>
+          <p>Weak recovery design and unmanaged exceptions are the most frequent causes of policy rollback.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B</a></li>
+          <li><a href="https://www.cisa.gov/resources-tools/resources/multi-factor-authentication-mfa-how-it-works" target="_blank" rel="noopener noreferrer">CISA MFA Guidance</a></li>
+          <li><a href="https://fidoalliance.org/fido-authentication-2/" target="_blank" rel="noopener noreferrer">FIDO Authentication Guidance</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/mfa-method-comparison.html">MFA Method Comparison</a></li>
+          <li><a href="/guides/sim-swap-defense-checklist.html">SIM Swap Defense Checklist</a></li>
+          <li><a href="/guides/social-media-account-hardening.html">Social Media Account Hardening Checklist</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/mfa-method-selector.js?v=20260305v1" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>

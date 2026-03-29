@@ -1,0 +1,42 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OopsMyPassword - Password Strength Checker</title>
+  <desc id="desc">A privacy-first local password strength checker with entropy and crack-time estimation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f14"/>
+      <stop offset="100%" stop-color="#15273a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.15" cy="0.1" r="0.9">
+      <stop offset="0%" stop-color="#1f3b57" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#1f3b57" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g transform="translate(90 112)">
+    <text x="0" y="0" fill="#e8edf3" font-family="Segoe UI, Arial, sans-serif" font-size="62" font-weight="700">
+      OopsMyPassword
+    </text>
+    <text x="0" y="72" fill="#9ab0c6" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="500">
+      Free Password Strength Checker
+    </text>
+
+    <g transform="translate(0 148)">
+      <rect x="0" y="0" width="1020" height="290" rx="22" fill="#121d2a" stroke="#2a3a50" stroke-width="2"/>
+      <text x="42" y="72" fill="#d8f0ff" font-family="Segoe UI, Arial, sans-serif" font-size="30">
+        Check strength, entropy, and crack-time locally in your browser.
+      </text>
+      <rect x="42" y="116" width="700" height="62" rx="12" fill="#0f1620" stroke="#36485e"/>
+      <text x="64" y="156" fill="#7f93a7" font-family="Segoe UI, Arial, sans-serif" font-size="26">
+        Type your password here
+      </text>
+      <rect x="42" y="206" width="860" height="18" rx="9" fill="#0d141d" stroke="#304257"/>
+      <rect x="42" y="206" width="645" height="18" rx="9" fill="#22c55e"/>
+      <text x="42" y="262" fill="#4ade80" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">
+        Strong - Everything runs locally
+      </text>
+    </g>
+  </g>
+</svg>

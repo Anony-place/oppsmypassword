@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-theme-mode="system" data-theme-ready="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){var root=document.documentElement;var mode="system";try{var stored=localStorage.getItem("omp-theme");if(stored==="dark"||stored==="light"||stored==="system"){mode=stored;}}catch(e){}var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var resolved=mode==="system"?(dark?"dark":"light"):mode;root.dataset.themeMode=mode;root.dataset.theme=resolved;root.setAttribute("data-theme-ready","true");})();</script>
+  <noscript><style>html[data-theme-ready="false"]{visibility:visible;}</style></noscript>
+  <title>Account Priority Matrix Tool | OopsMyPassword</title>
+  <meta name="description" content="Tier accounts by sensitivity and reset dependency, then generate a migration sequence for faster risk reduction.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#081725">
+  <link rel="canonical" href="https://oopsmypassword.web.app/tools/account-priority-matrix/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oops My Password">
+  <meta property="og:title" content="Account Priority Matrix Tool | OopsMyPassword">
+  <meta property="og:description" content="Build Tier 1/2/3 account sequence and execute security migration in the right order.">
+  <meta property="og:url" content="https://oopsmypassword.web.app/tools/account-priority-matrix/">
+  <meta property="og:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Account Priority Matrix Tool | OopsMyPassword">
+  <meta name="twitter:description" content="Prioritize accounts by blast radius and generate an operational migration order.">
+  <meta name="twitter:image" content="https://oopsmypassword.web.app/assets/img/og-cover.svg">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20260228v4">
+  <link rel="stylesheet" href="/assets/css/tools.css?v=20260228v4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Account Priority Matrix Tool",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://oopsmypassword.web.app/tools/account-priority-matrix/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Account tiering and migration planning tool based on sensitivity and reset-hub dependency."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Why use tiering before password migration?", "acceptedAnswer": {"@type": "Answer", "text": "Tiering ensures critical accounts are secured first to minimize blast radius quickly."}},
+        {"@type": "Question", "name": "What belongs in Tier 1?", "acceptedAnswer": {"@type": "Answer", "text": "Identity hubs, financial systems, and accounts that can reset other accounts."}},
+        {"@type": "Question", "name": "Can Tier 3 accounts be ignored?", "acceptedAnswer": {"@type": "Answer", "text": "No. They should be closed or migrated later, but not permanently ignored."}},
+        {"@type": "Question", "name": "How often should matrix be updated?", "acceptedAnswer": {"@type": "Answer", "text": "Monthly during migration and after major account or role changes."}},
+        {"@type": "Question", "name": "Why export matrix output?", "acceptedAnswer": {"@type": "Answer", "text": "Export supports accountability and sequencing across teams or household account owners."}}
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="shell">
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/"><span class="brand-dot"></span> OopsMyPassword</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a class="is-active" href="/tools/">Tools</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/best-practices/">Best Practices</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: System" aria-pressed="false" title="Theme: System">Theme: System</button>
+      </div>
+      <section class="hero fade-stagger">
+        <h1>Account Priority Matrix</h1>
+        <p>Rank accounts by sensitivity and recovery dependency to build an execution sequence that reduces takeover risk in the fewest steps.</p>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section class="card" aria-labelledby="tool-heading">
+        <div class="section-head">
+          <h2 id="tool-heading">Run Tool</h2>
+          <span class="badge good">Migration Planning</span>
+        </div>
+
+        <form id="priority-matrix-form" class="tool-form" novalidate>
+          <div id="matrix-rows" class="page-grid"></div>
+          <div class="tool-actions">
+            <button id="matrix-add-row" type="button" class="btn-secondary">Add Account Row</button>
+            <button type="submit" class="btn-primary">Build Matrix</button>
+            <button id="matrix-export" type="button" class="btn-secondary">Export Plan</button>
+          </div>
+        </form>
+
+        <div class="result-panel" aria-live="polite">
+          <div class="kpi-grid">
+            <div class="kpi"><span class="microcopy">Tier 1</span><strong id="matrix-tier1">0</strong></div>
+            <div class="kpi"><span class="microcopy">Tier 2</span><strong id="matrix-tier2">0</strong></div>
+            <div class="kpi"><span class="microcopy">Tier 3</span><strong id="matrix-tier3">0</strong></div>
+          </div>
+          <ul id="matrix-recommendations" class="bullet-list"></ul>
+          <div id="matrix-next24" class="stepper"></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="method-heading">
+        <h2 id="method-heading">Methodology: Sequencing Beats Volume During Credential Migration</h2>
+        <p>Many security programs fail because they optimize for account count instead of risk reduction speed. Teams spend days rotating low-impact accounts while identity hubs remain exposed. Attackers need only one overlooked reset hub to re-enter broader account graphs.</p>
+        <p>This matrix tool enforces a tiering model that prioritizes blast-radius control. Tier 1 captures accounts with direct financial impact, identity reset authority, or privileged access. Tier 2 captures meaningful but non-root dependencies. Tier 3 includes low-impact or dormant accounts that should be closed or migrated after core risk is contained.</p>
+        <p>The scoring logic is intentionally simple because planning tools should favor adoption over complexity. Inputs focus on three variables users can assess quickly: account name, sensitivity, and reset-hub dependency. The resulting tier output is actionable and easy to audit across time.</p>
+        <p>Behaviorally, explicit tier assignment reduces procrastination and false completion bias. Without tiering, people may complete many easy resets and feel done, even when high-impact accounts remain unchanged. By surfacing Tier 1 count prominently, the tool keeps attention on what actually changes security posture.</p>
+        <p>The matrix also supports delegation. In shared environments, each Tier 1 account can be assigned to a specific owner with deadlines. Exported plans create traceability and reduce drift, especially when multiple people are responsible for overlapping account sets.</p>
+        <p>Finally, this model supports lifecycle hygiene. Tier 3 often contains old subscriptions and unused logins that accumulate over years. Closing those accounts reduces attack surface and future maintenance burden, creating a cleaner identity perimeter over time.</p>
+      </section>
+
+      <section class="card" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Actionable Checklist</h2>
+        <ul class="note-list">
+          <li>Identify and lock Tier 1 accounts before broad password rotation starts.</li>
+          <li>Assign account ownership and due dates for each Tier 1 migration item.</li>
+          <li>Batch Tier 2 updates once Tier 1 is verified with MFA and recovery checks.</li>
+          <li>Close or archive Tier 3 accounts where possible to shrink attack surface.</li>
+          <li>Rebuild matrix monthly during active migration periods.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="operations-heading">
+        <h2 id="operations-heading">Operational Matrix Notes</h2>
+        <p>The matrix is most useful when tied to execution cadence. Teams should convert tier output into weekly sprint objectives with clearly assigned owners. Tier 1 actions should be treated as blockers for lower-priority work because they control identity blast radius. Once Tier 1 accounts are stabilized, Tier 2 can be migrated in batches while monitoring for lockout or support friction.</p>
+        <p>Account inventories also change quickly. New SaaS adoption, staff transitions, and third-party integrations can create hidden reset dependencies that were absent in the last review. A monthly matrix refresh catches this drift and prevents old assumptions from driving current security decisions. During active incidents or major migrations, weekly refresh can be appropriate for high-risk environments.</p>
+        <p>For solo users, the same model prevents burnout by replacing a vague \"fix everything\" goal with a practical queue. Tier 1 first, Tier 2 next, Tier 3 cleanup last is easier to sustain and less likely to fail under daily workload pressure. Exported matrix output makes progress visible and reduces relapse into insecure defaults.</p>
+        <p>To improve precision, teams can append two additional fields in their internal copy of the matrix: external exposure level and business continuity impact. These fields are not required for baseline use, but they help break ties between accounts with similar sensitivity. Over time, this richer model produces more stable migration order and better communication with leadership when security work competes with product deadlines and audit commitments. It also strengthens quarterly governance reviews and executive reporting quality.</p>
+      </section>
+
+      <section class="card" aria-labelledby="scenario-heading">
+        <h2 id="scenario-heading">Real-World Scenario</h2>
+        <p>A startup migrates 120 account passwords over two weeks but does not prioritize account classes. Most effort goes to low-risk SaaS tools while primary email and billing admin credentials are changed late. During this window, an attacker reuses leaked credentials to access billing and escalate through reset flows.</p>
+        <p>With tiering, the team would have completed high-impact migrations in the first day, drastically reducing exposure. Total migration duration may remain similar, but risk would decline much faster.</p>
+        <p>Households see the same pattern with personal accounts. Securing streaming and shopping accounts first feels productive, but identity hubs still drive the highest compromise impact.</p>
+      </section>
+
+      <section class="card" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes</h2>
+        <ul class="bullet-list">
+          <li>Sorting by convenience instead of blast radius.</li>
+          <li>Treating all accounts as equal sensitivity.</li>
+          <li>Ignoring reset-hub dependency relationships.</li>
+          <li>Skipping ownership assignment for shared accounts.</li>
+          <li>Never revisiting matrix after account landscape changes.</li>
+        </ul>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <article>
+          <h3>Why tier before migration?</h3>
+          <p>Tiering ensures risk declines quickly by protecting critical accounts first.</p>
+        </article>
+        <article>
+          <h3>What belongs in Tier 1?</h3>
+          <p>Email roots, financial systems, cloud admin, and reset authority accounts.</p>
+        </article>
+        <article>
+          <h3>Can Tier 3 be ignored?</h3>
+          <p>No. Tier 3 should be closed or secured later to avoid long-term exposure.</p>
+        </article>
+        <article>
+          <h3>How often should matrix be updated?</h3>
+          <p>Monthly during migration and after major role/device/account changes.</p>
+        </article>
+        <article>
+          <h3>Why export matrix output?</h3>
+          <p>Export improves accountability and keeps migration sequence consistent across owners.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ul class="bullet-list">
+          <li><a href="https://owasp.org/www-community/attacks/Credential_stuffing" target="_blank" rel="noopener noreferrer">OWASP Credential Stuffing</a></li>
+          <li><a href="https://www.cisa.gov/secure-our-world/use-a-password-manager" target="_blank" rel="noopener noreferrer">CISA: Use a Password Manager</a></li>
+          <li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Guides</h2>
+        <ul class="bullet-list">
+          <li><a href="/guides/stop-password-reuse.html">How to Stop Password Reuse Without Burnout</a></li>
+          <li><a href="/guides/unique-passwords-every-account.html">Why Every Account Needs a Unique Password</a></li>
+          <li><a href="/guides/migrate-passwords-safely.html">How to Migrate Passwords Safely</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/tools/">Tools</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/terms/">Terms</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+      </div>
+      <p>Educational guidance only. This site does not guarantee account security outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/theme.js?v=20260228v4" defer></script>
+  <script type="module" src="/assets/js/tools/account-priority-matrix.js?v=20260228v3" defer></script>
+  <script type="module" src="/assets/js/firebase-init.js?v=20260220v3" defer></script>
+</body>
+</html>
+
+

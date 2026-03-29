@@ -1,0 +1,162 @@
+{
+  "hosting": {
+    "site": "oopsmypassword",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/about/index.html",
+        "destination": "/about/",
+        "type": 301
+      },
+      {
+        "source": "/best-practices/index.html",
+        "destination": "/best-practices/",
+        "type": 301
+      },
+      {
+        "source": "/contact/index.html",
+        "destination": "/contact/",
+        "type": 301
+      },
+      {
+        "source": "/editorial-policy/index.html",
+        "destination": "/editorial-policy/",
+        "type": 301
+      },
+      {
+        "source": "/faq/index.html",
+        "destination": "/faq/",
+        "type": 301
+      },
+      {
+        "source": "/guides/index.html",
+        "destination": "/guides/",
+        "type": 301
+      },
+      {
+        "source": "/privacy/index.html",
+        "destination": "/privacy/",
+        "type": 301
+      },
+      {
+        "source": "/terms/index.html",
+        "destination": "/terms/",
+        "type": 301
+      },
+      {
+        "source": "/tools/index.html",
+        "destination": "/tools/",
+        "type": 301
+      },
+      {
+        "source": "/tools/:tool/index.html",
+        "destination": "/tools/:tool/",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/manifest.webmanifest",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/sitemap*.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          },
+          {
+            "key": "X-Robots-Tag",
+            "value": "all"
+          }
+        ]
+      },
+      {
+        "source": "/index.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          },
+          {
+            "key": "X-Robots-Tag",
+            "value": "all"
+          }
+        ]
+      },
+      {
+        "source": "/robots.txt",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "primary": [
+    { "label": "Home", "href": "/" },
+    { "label": "Tools", "href": "/tools/" },
+    { "label": "Guides", "href": "/guides/" },
+    { "label": "FAQ", "href": "/faq/" },
+    { "label": "Best Practices", "href": "/best-practices/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "footer": [
+    { "label": "Tools", "href": "/tools/" },
+    { "label": "Guides", "href": "/guides/" },
+    { "label": "Privacy", "href": "/privacy/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "FAQ", "href": "/faq/" },
+    { "label": "Contact", "href": "/contact/" },
+    { "label": "Terms", "href": "/terms/" },
+    { "label": "Editorial Policy", "href": "/editorial-policy/" }
+  ]
+}
