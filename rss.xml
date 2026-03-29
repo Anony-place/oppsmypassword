@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>OopsMyPassword Cybersecurity Guides</title>
+  <link>https://oopsmypassword.web.app/guides/</link>
+  <description>Actionable cybersecurity workflows, tools, and implementation checklists.</description>
+  <language>en-us</language>
+  <lastBuildDate>Sun, 29 Mar 2026 15:31:31 GMT</lastBuildDate>
+  <atom:link href="https://oopsmypassword.web.app/rss.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title><![CDATA[Account Recovery Hardening Checklist]]></title>
+    <link>https://oopsmypassword.web.app/guides/account-recovery-hardening-checklist.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/account-recovery-hardening-checklist.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[API Security Standards Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/api-security-standards.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/api-security-standards.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Biometric Authentication Risks Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/biometric-authentication-risks.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/biometric-authentication-risks.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Password Breach Response Checklist]]></title>
+    <link>https://oopsmypassword.web.app/guides/breach-response-checklist.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/breach-response-checklist.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Browser Extension Security Checklist]]></title>
+    <link>https://oopsmypassword.web.app/guides/browser-extension-security.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/browser-extension-security.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Device Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Business Continuity Planning BCP Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/business-continuity-planning-bcp.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/business-continuity-planning-bcp.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[How to Choose the Right Password Manager]]></title>
+    <link>https://oopsmypassword.web.app/guides/choosing-password-manager.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/choosing-password-manager.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Cloud Misconfiguration Risks Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/cloud-misconfiguration-risks.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cloud-misconfiguration-risks.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Container Security Basics Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/container-security-basics.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/container-security-basics.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Credential Stuffing Explained for Non-Technical Users]]></title>
+    <link>https://oopsmypassword.web.app/guides/credential-stuffing-explained.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/credential-stuffing-explained.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Cryptocurrency Wallet Protection Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/cryptocurrency-wallet-protection.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cryptocurrency-wallet-protection.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Cyber Insurance Checklist Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/cyber-insurance-checklist.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cyber-insurance-checklist.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Cybersecurity Incident Handover Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/cybersecurity-incident-handover.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/cybersecurity-incident-handover.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Dark Web Monitoring Alerts Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/dark-web-monitoring-alerts.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/dark-web-monitoring-alerts.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Data Breach Notification Response Plan]]></title>
+    <link>https://oopsmypassword.web.app/guides/data-breach-notification-response.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/data-breach-notification-response.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Data Loss Prevention Basics Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/data-loss-prevention-basics.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/data-loss-prevention-basics.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Database Encryption Strategies Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/database-encryption-strategies.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/database-encryption-strategies.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[DevSecOps Integration Rules Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/devsecops-integration-rules.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/devsecops-integration-rules.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Digital Footprint Reduction Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/digital-footprint-reduction.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/digital-footprint-reduction.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Disaster Recovery Testing Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/disaster-recovery-testing.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/disaster-recovery-testing.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Email Header Basics for Security Verification]]></title>
+    <link>https://oopsmypassword.web.app/guides/email-header-basics.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/email-header-basics.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Phishing Defense]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Endpoint Protection Strategy Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/endpoint-protection-strategy.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/endpoint-protection-strategy.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Enterprise Patch Management Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/enterprise-patch-management.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/enterprise-patch-management.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Firewall Configuration Guide Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/firewall-configuration-guide.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/firewall-configuration-guide.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Forensic Data Collection Protocols Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/forensic-data-collection-protocols.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/forensic-data-collection-protocols.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[GDPR Data Protection Requirements Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/gdpr-data-protection-requirements.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/gdpr-data-protection-requirements.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Hardware Security Keys Guide Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/hardware-security-keys-guide.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/hardware-security-keys-guide.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Incident Evidence Preservation Basics for Non-Forensic Teams]]></title>
+    <link>https://oopsmypassword.web.app/guides/incident-evidence-preservation-basics.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/incident-evidence-preservation-basics.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Incident Response Playbook Design Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/incident-response-playbook-design.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/incident-response-playbook-design.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Insider Threat Detection Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/insider-threat-detection.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/insider-threat-detection.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[IoT Device Security Standards Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/iot-device-security-standards.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/iot-device-security-standards.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[ISO 27001 Compliance Steps Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/iso-27001-compliance-steps.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/iso-27001-compliance-steps.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Kubernetes Hardening Guide Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/kubernetes-hardening-guide.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/kubernetes-hardening-guide.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Malicious Link Analysis Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/malicious-link-analysis.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/malicious-link-analysis.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Malware Analysis Basics Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/malware-analysis-basics.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/malware-analysis-basics.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[MFA Method Comparison: SMS, App, Hardware Key, and Passkey]]></title>
+    <link>https://oopsmypassword.web.app/guides/mfa-method-comparison.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/mfa-method-comparison.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[How to Migrate Passwords Safely Into a Manager]]></title>
+    <link>https://oopsmypassword.web.app/guides/migrate-passwords-safely.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/migrate-passwords-safely.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Mobile App Security Hardening Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/mobile-app-security-hardening.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/mobile-app-security-hardening.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Mobile Device Hardening Plan for High-Risk Accounts]]></title>
+    <link>https://oopsmypassword.web.app/guides/mobile-device-hardening.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/mobile-device-hardening.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Device Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Network Segmentation Best Practices Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/network-segmentation-best-practices.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/network-segmentation-best-practices.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Open Source Intelligence OSINT Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/open-source-intelligence-osint.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/open-source-intelligence-osint.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Passkeys Backup and Recovery Checklist]]></title>
+    <link>https://oopsmypassword.web.app/guides/passkeys-backup-recovery.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passkeys-backup-recovery.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Passkeys Setup Guide for Everyday Users]]></title>
+    <link>https://oopsmypassword.web.app/guides/passkeys-setup-guide.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passkeys-setup-guide.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Passkeys vs Passwords: What to Use and When]]></title>
+    <link>https://oopsmypassword.web.app/guides/passkeys-vs-passwords.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passkeys-vs-passwords.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Passphrase Method for Strong, Memorable Passwords]]></title>
+    <link>https://oopsmypassword.web.app/guides/passphrase-method.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/passphrase-method.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Password Length vs Complexity: Which Matters More?]]></title>
+    <link>https://oopsmypassword.web.app/guides/password-length-vs-complexity.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/password-length-vs-complexity.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Password Manager Guide for Beginners]]></title>
+    <link>https://oopsmypassword.web.app/guides/password-manager-guide.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/password-manager-guide.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Password Manager Migration Strategy Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/password-manager-migration-strategy.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/password-manager-migration-strategy.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Most Common Password Mistakes and Fixes]]></title>
+    <link>https://oopsmypassword.web.app/guides/password-mistakes.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/password-mistakes.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Identity Security]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Penetration Testing Guide Implementation Guide]]></title>
+    <link>https://oopsmypassword.web.app/guides/penetration-testing-guide.html</link>
+    <guid isPermaLink="true">https://oopsmypassword.web.app/guides/penetration-testing-guide.html</guid>
+    <description><![CDATA[undefined]]></description>
+    <pubDate>Sun, 29 Mar 2026 15:31:31 GMT</pubDate>
+    <category><![CDATA[Incident Response]]></category>
+  </item>
+</channel>
+</rss>
